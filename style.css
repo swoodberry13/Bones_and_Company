@@ -1,1 +1,20 @@
-h1 {}
+/*colors
+dark teal: #0E3B43
+very light blue: #E1EFF6
+light blue: #B0DDFC
+light purply beige:#D0C8D0
+brownish beige: #CDBDB6*/
+
+.header{
+	position:fixed;
+	width:100%;
+	z-index:100;
+	background-color: #D0C8D0;
+}
+#menuIMG{
+	position: absolute;
+	display: inline-block;
+	max-height: 30px;
+	right:1vw;
+	top: 1vw;
+}
