@@ -7,6 +7,32 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class= "header">
+		<div id="top_banner">
+			<script type="text/javascript">
+				function showMenu() {/*script for top navbar*/
+					var x= document.getElementById('menu');
+					if (x.style.display === "block") {x.style.display = "none";}
+					else {x.style.display = "block";}
+				}
+			</script>
+
+
+			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
+			<div class="topNav">
+				<img id="menuIMG" src="./images/menuIcon.png" onclick="showMenu()">
+			</div>	
+		</div>
+		<ul id="menu">
+
+			<li class="itemMenu"><a href="book.html">Book</a></li>
+			<li class="itemMenu"><a href="services.html">Services</a></li>
+			<li class="itemMenu"><a href="resources.html">Resources</a></li>
+			<li class="itemMenu"><a href="contact.html">Contact Us</a></li>
+			<li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
+			<li class="itemMenu"><a href="customers.html">Customers</a></li>
+		</ul>
+	</div>
 
 </body>
 </html>

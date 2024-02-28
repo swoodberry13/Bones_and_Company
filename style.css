@@ -1,9 +1,11 @@
 /*colors
-dark teal: #0e3b43
+link:https://coolors.co/e1eff6-124a54-ffffff-a5d7f9-edae49
+
+dark teal: #0e3b43 orr #124A54 (lighter)
 very light blue: #E1EFF6
-light blue: #B0DDFC
-yellow: #edae49
-marroonish red: af1b3f
+light blue: #A5D7F9
+yellow(dark): #edae49
+
 */
 body{
 	background-color: #E1EFF6;
@@ -44,7 +46,7 @@ body{
 	display: block;
 	padding: 10px 10px;
 
-	background-color: #B0DDFC;
+	background-color: #A5D7F9;
 	text-decoration: none;
 	font-family: Verdana, Arial, sans-serif;
 
@@ -53,6 +55,7 @@ body{
 	color: #ffffff;
 	border-left: 3px solid #edae49;
 	border-bottom: 3px solid #edae49;
+
 
 }
 .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
