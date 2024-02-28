@@ -1,17 +1,27 @@
 /*colors
-dark teal: #155965
+dark teal: #0e3b43
 very light blue: #E1EFF6
 light blue: #B0DDFC
-light purply beige:#D0C8D0
-brownish beige: #CDBDB6*/
+yellow: #edae49
+marroonish red: af1b3f
+*/
+body{
+	background-color: #E1EFF6;
+}
 
 .header{
 	position:fixed;
 	width:100%;
+	display: block;
+/*	height: max-content;*/
 	z-index:100;
-	background-color: #E1EFF6;
+/*	background-color: #edae49;*/
 	right: 0px;
 	top: 0px;
+}
+#top_banner{
+	height: max-content;
+	background-color: #edae49;
 }
 #menuIMG{
 	position: absolute;
@@ -19,6 +29,7 @@ brownish beige: #CDBDB6*/
 	max-height: 30px;
 	right:1vw;
 	top: 1vw;
+	cursor: pointer;
 }
 #logo{
 	max-height: 62px;
@@ -27,26 +38,33 @@ brownish beige: #CDBDB6*/
 	padding-top: 4px;
 }
 
-.pageMenu a{
+.itemMenu a{
 	float:right;
 
 	display: block;
 	padding: 10px 10px;
 
-	background-color: #FFA21F;
+	background-color: #B0DDFC;
 	text-decoration: none;
 	font-family: Verdana, Arial, sans-serif;
 
 	text-align: center;
 	font-size: 70%;
-	color: white;
-	border: 2vw, white;
-	outline-style: solid;
+	color: #ffffff;
+	border-left: 3px solid #edae49;
+	border-bottom: 3px solid #edae49;
+
+}
+.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
+	a{
+		border-bottom-left-radius: 4px;
+	}
 }
 #menu {
   list-style-type: none;
-/*  margin: 0;
+
+  margin: 0;
   padding:0;
   top: 0;
-  display: none;*/
+  display: none;
 }
