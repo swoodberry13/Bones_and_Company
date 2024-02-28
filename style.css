@@ -1,5 +1,5 @@
 /*colors
-dark teal: #0E3B43
+dark teal: #155965
 very light blue: #E1EFF6
 light blue: #B0DDFC
 light purply beige:#D0C8D0
@@ -9,7 +9,9 @@ brownish beige: #CDBDB6*/
 	position:fixed;
 	width:100%;
 	z-index:100;
-	background-color: #D0C8D0;
+	background-color: #E1EFF6;
+	right: 0px;
+	top: 0px;
 }
 #menuIMG{
 	position: absolute;
@@ -17,4 +19,34 @@ brownish beige: #CDBDB6*/
 	max-height: 30px;
 	right:1vw;
 	top: 1vw;
+}
+#logo{
+	max-height: 62px;
+	position: center;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+
+.pageMenu a{
+	float:right;
+
+	display: block;
+	padding: 10px 10px;
+
+	background-color: #FFA21F;
+	text-decoration: none;
+	font-family: Verdana, Arial, sans-serif;
+
+	text-align: center;
+	font-size: 70%;
+	color: white;
+	border: 2vw, white;
+	outline-style: solid;
+}
+#menu {
+  list-style-type: none;
+/*  margin: 0;
+  padding:0;
+  top: 0;
+  display: none;*/
 }
