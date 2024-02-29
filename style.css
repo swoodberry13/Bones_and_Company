@@ -9,11 +9,16 @@ yellow(dark): #edae49
 */
 body{
 	background-color: #E1EFF6;
+	margin: 0;
 }
 
 .header{
-	position:fixed;
+	position:sticky;
+	top: 0%;
 	width:100%;
+	padding: 0px;
+/*	margin-top: 0px;*/
+
 	display: block;
 /*	height: max-content;*/
 	z-index:100;
@@ -22,6 +27,9 @@ body{
 	top: 0px;
 }
 #top_banner{
+/*	margin-top: 0px;
+	padding-top: 0px;*/
+	width:100%;
 	height: max-content;
 	background-color: #edae49;
 }
