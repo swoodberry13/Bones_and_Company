@@ -3,8 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Meet Our Staff</title>
 	<link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 100px;
+        }
+        .grid-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        #vet-grid-1, #vet-grid-2, #vet-grid-3, #vet-grid-4 {
+            background-size: cover;
+            height: 300px;
+            width: 230px;
+            border-radius: 5%;
+        }
+        #vet-grid-1 {
+        }
+        #vet-grid-2 {
+            background-image: url(images/drkidden.jpeg);
+            /* https://www.flickr.com/photos/accdistrict/15641786238/in/photostream/ */
+        }
+        #vet-grid-3 {
+            background-image: url(images/drmouse.jpg);
+       
+        }
+        #vet-grid-4 {
+            background-image: url(images/drkatz.jpeg);
+             /* https://www.hindustantimes.com/lifestyle/pet/national-take-your-cat-to-the-vet-day-why-your-cat-needs-regular-checkups-101692631561644.html */
+        }
+  
+    </style>
 </head>
 <body>
 	<div class= "header">
@@ -33,5 +71,34 @@
 			<li class="itemMenu"><a href="customers.html">Customers</a></li>
 		</ul>
 	</div>
+    <div class="container firstOnPage">
+        
+        <h1>Meet Our Staff</h1>
+        <h2>Veterinarians</h2>
+        <div class="grid">
+            <div class="grid-items">
+                <div id="vet-grid-1"></div>
+                <h3>Dr. Bones, DVM</h3>
+                <p>Dr. Bones is a skilled and compassionate veterinary surgeon with a passion for animal welfare. Graduating top of his class from the Tufts University School of Veterinary Medicine, he has dedicated his career to providing exceptional surgical care to animals in need. With expertise in advanced surgical techniques and a gentle touch, Dr. Bones ensures the safety and well-being of his patients throughout their treatment journey. His commitment to excellence and his love for animals make him a trusted partner in pet care for families in the community.
+                </p>
+            </div>
+            <div class="grid-items">
+                <div id="vet-grid-2"></div>
+                <h3>Dr. Kidden, DVM</h3>
+                <p>Known for her gentle touch and holistic approach to veterinary medicine, Dr. Kidden earned her degree from the University of California, Davis. Her commitment to integrative therapies, including acupuncture and herbal medicine, enriches the lives of both pets and their families.</p>
+            </div>
+            <div class="grid-items">
+                <div id="vet-grid-3"></div>
+                <h3>Dr. Mouse, DVM</h3>
+                <p>With a passion for animal welfare from a young age, Dr. Mouse pursued her veterinary degree at the esteemed University of Vermont. Specializing in small animal care, she combines expertise with compassion to ensure furry companions receive the best possible treatment.</p>
+            </div>
+            <div class="grid-items">
+                <div id="vet-grid-4"></div>
+                <h3>Dr. Katz, DVM</h3>
+                <p>Dr. Katz is a passionate advocate for feline health. With expertise in preventive medicine, internal health, and feline behavior, Dr. Katz ensures every cat receives the attention they deserve. Their dedication and empathy strengthen the bond between cats and their human companions, making them a trusted ally in feline wellness.</p>
+            </div>
+        </div>
+        <h2>Staff</h2>
+    </div>
 </body>
 </html>
