@@ -3,15 +3,18 @@ link:https://coolors.co/e1eff6-124a54-ffffff-a5d7f9-edae49
 
 dark teal: #0e3b43 orr #124A54 (lighter)
 very light blue: #E1EFF6
-light blue: #A5D7F9
+light blue: #A5D7F9 ---> lighter #b1defc
 yellow(dark): #edae49
 
 */
+p,h1,h2,h3{font-family: Verdana, Arial, sans-serif;}
+
 body{
 	background-color: #E1EFF6;
 	margin: 0;
 }
 
+/*BANNER AND MENU STUFF*/
 .header{
 	position:sticky;
 	top: 0%;
@@ -79,7 +82,16 @@ body{
   top: 0;
   display: none;
 }
+/* END OF BANNER AND MENU STUFF*/
 
-.firstOnPage {
-    margin-top: 100px;
+.textblock1{
+	background-color:#A5D7F9;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
+	border-radius: 1vw;
+	border: 10px #b1defc ;
+	padding: 2vw;
+		p{color:  #124A54; }
 }
