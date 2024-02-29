@@ -71,3 +71,7 @@ body{
   top: 0;
   display: none;
 }
+
+.firstOnPage {
+    margin-top: 100px;
+}
