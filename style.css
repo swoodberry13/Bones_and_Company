@@ -7,7 +7,9 @@ light blue: #A5D7F9 ---> lighter #b1defc
 yellow(dark): #edae49
 
 */
-p,h1,h2,h3{font-family: Verdana, Arial, sans-serif;}
+p,h1,h2,h3{
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: normal;}
 
 body{
 	background-color: #E1EFF6;
@@ -67,6 +69,7 @@ body{
 	border-left: 3px solid #edae49;
 	border-bottom: 3px solid #edae49;
 
+	 box-shadow: -2px 1px 6px #227e8f;
 
 }
 .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
@@ -76,7 +79,6 @@ body{
 }
 #menu {
   list-style-type: none;
-
   margin: 0;
   padding:0;
   top: 0;
@@ -90,8 +92,39 @@ body{
 	margin-right: 4vw;
 	margin-top: 3vw;
 	margin-bottom: 3vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: .1vw;
+	padding-bottom: 1vw;
+
 	border-radius: 1vw;
-	border: 10px #b1defc ;
-	padding: 2vw;
-		p{color:  #124A54; }
+	border: 10px white ;
+
+	
+		p{
+			color:  #124A54;
+			padding-left: 1.5vw;
+			padding-right: 1.5vw;
+
+		 }
+		 h2{
+		 	position: relative;
+		 	text-align: center;
+		 	color: #ffffff;
+		 	padding: 1.5vw;
+
+		 	font-weight: normal;
+		 }
+		 .block1Title{
+		 	margin-top: .5vw;
+		 	margin-left: .75vw;
+		 	margin-right: .75vw;
+		 	margin-bottom: .5vw;
+
+		 	border-radius: 2vw;
+		 	position: relative;
+		 	background-color: #edae49;
+		 	max-width: max-content;
+		 	
+		 }
 }
