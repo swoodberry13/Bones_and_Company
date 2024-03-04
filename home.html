@@ -6,7 +6,169 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Home</title>
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+	<style>
+
+		/* BACKGROUND STYLE */
+
+		/* video container styles */
+		.video-container {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		/* video styles */
+		video {
+			width: 100%;
+			height: auto;
+		}
+
+		/* overlay text styles */
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: #ffffff;
+
+			/* adds shadow to the text in front of the background vid*/
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+
+		.overlay-text h1 {
+			font-size: 3em;
+			font-weight: 700;
+		}
+
+		.overlay-text p {
+			font-size: 1.5em;
+			margin-top: 20px;
+		}
+
+		.video-container video {
+			filter: saturate(150%) brightness(1.1);
+		}
+
+		/* END OF BACKGROUND STYLE */
+
+
+		/* BUTTON STYLE */
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #edae49;
+			border: 2px solid #edae49;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: #124A54;
+			border: 2px solid #124A54;
+		}
+
+		.button:after {
+			display: inline-block;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.button:hover:after {
+			opacity: 1;
+		}
+
+		/* END OF BUTTON STYLE */
+
+
+		/* SECTION STYLE */
+
+		.services-section, .team-section {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #E1EFF6;
+			padding: 5vw 10vw;
+		}
+
+		/* END OF SECTION STYLE */
+
+
+		/* SERVICES STYLE */
+
+		.services-image {
+			width: 25%;
+			max-width: 100%; 
+			max-height: 100%;
+			border-radius: 20px;
+			margin-right: 3vw;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+		}
+
+		.service-dog-img {
+			width: 100%;
+		}
+
+		.services-content {
+			text-align: left;
+			width: 75%;
+		}
+
+		.care-types {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.care-type {
+			flex: 1;
+			padding: 1vw;
+			/* background-color: #A5D7F9;
+			border-radius: 10px; */
+			margin-bottom: 1vw;
+		}
+
+		.care-type h2 {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.care-type p {
+			font-size: 1em;
+			color: #124A54;
+			margin-top: 10px;
+		}
+
+		/* END OF SERVICES STYLE */
+
+
+		/* TEAM STYLE */
+
+		.team-content {
+			text-align: left;
+			width: 50%;
+		}
+
+		.team-image {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.team-photo-img {
+			width: 100%; /* Adjust as needed */
+			border-radius: 50%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+
+		/* END OF TEAM STYLE */
+
+	</style>
 </head>
+
 <body>
 	<div class= "header">
 		<div id="top_banner">
@@ -33,6 +195,55 @@
 			<li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
 			<li class="itemMenu"><a href="customers.html">Customers</a></li>
 		</ul>
+	</div>
+
+	<div class="video-container">
+        <video autoplay loop muted>
+            <source src="./images/dog_background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <h1>Bones & Company</h1>
+            <p>Excellent pets deserve excellent care.</p>
+            <a href="book.html" class="button">BOOK APPOINTMENT</a>
+        </div>
+    </div>
+
+	<div class="services-section">
+		<div class="services-image">
+			<img src="./images/service_dog.jpg" alt="Services Image" class="service-dog-img">
+		</div>
+
+		<div class="services-content">
+			<h1>Our Services</h1>
+			<div class="care-types">
+				<div class="care-type">
+					<h2>WELLNESS CARE</h2>
+					<p>Ensure your pets stay healthy with regular wellness check-ups and preventive care.</p>
+				</div>
+				<div class="care-type">
+					<h2>URGENT CARE</h2>
+					<p>Get immediate attention for your pets in case of emergencies and urgent situations.</p>
+				</div>
+				<div class="care-type">
+					<h2>DENTAL CARE</h2>
+					<p>Maintain your pet's oral health with our professional dental care services.</p>
+				</div>
+			</div>
+			<a href="services.html" class="button">VIEW ALL SERVICES</a>
+		</div>
+	</div>
+
+	<div class="team-section">
+		<div class="team-content">
+			<h1>Our Team</h1>
+			<p>Our friendly and dedicated team is committed to providing excellent care for your pets.</p>
+			<a href="meetStaff.html" class="button">MEET THE TEAM</a>
+		</div>
+
+		<div class="team-image">
+			<img src="./images/team.jpg" alt="Team Image" class="team-photo-img">
+		</div>
 	</div>
 
 
