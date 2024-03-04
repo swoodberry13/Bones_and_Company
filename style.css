@@ -95,8 +95,8 @@ body{
 	margin-right: 4vw;
 	margin-top: 3vw;
 	margin-bottom: 3vw;
-	padding-left: 2vw;
-	padding-right: 2vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
 	padding-top: .1vw;
 	padding-bottom: 1vw;
 
@@ -110,11 +110,12 @@ body{
 			padding-right: 1.5vw;
 
 		 }
-		 h2{
+		 h2,h1,h3{
 		 	position: relative;
 		 	text-align: center;
 		 	color: #ffffff;
 		 	padding: 1.5vw;
+
 
 		 	font-weight: normal;
 		 }
@@ -125,16 +126,31 @@ body{
 		 	margin-bottom: .5vw;
 
 		 	border-radius: 2vw;
+
 		 	position: relative;
 		 	background-color: #edae49;
 		 	max-width: max-content;
-		 	
+		 	text-align: center;
 		 }
 }
+.title1{
+	text-align: center;
+	color: #ffffff;
+}
+.title1 span{ /* this is for the background of title1 */
+	margin-top: .5vw;
+	margin-left: .75vw;
+	margin-right: .75vw;
+	margin-bottom: .5vw;
+	background-color: #124A54;
+	padding:  1.5vw;
+	border-radius: 1vw;
+}
+
 .imgBlock{
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #FFBE82;
+	background-color: #edae49;
 	padding:  20px;
 	margin: 20px;
 	border-radius: 20px;
