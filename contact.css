@@ -1,6 +1,6 @@
 /* Hero Image*/
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mabel2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("mabelboat.JPG");
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,4 +20,3 @@
 
 
 
-  
