@@ -5,7 +5,7 @@ dark teal: #0e3b43 orr #124A54 (lighter)
 very light blue: #E1EFF6
 light blue: #A5D7F9 ---> lighter #b1defc
 yellow(dark): #edae49
-
+#ffffff
 */
 p,h1,h2,h3{
 	font-family: Verdana, Arial, sans-serif;
@@ -131,3 +131,37 @@ body{
 		 	
 		 }
 }
+.imgBlock{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #FFBE82;
+	padding:  20px;
+	margin: 20px;
+	border-radius: 20px;
+
+
+}
+.right-imgBlock{
+	flex: 50%;
+	text-align: center;
+	margin: 10px,20px,10px,20px;
+		img{
+		max-height: 500px ;
+		border-radius: 10px;
+		margin: 10px;
+	}
+}
+.left-imgBlock{
+	flex: 50%;
+	img{
+		max-height: 500px ;
+		border-radius: 10px;
+	}
+}
+@media (max-width: 800px) { 
+	.right-imgBlock, .left-imgBlock {flex: 100%;}
+}
+
+
+
+
