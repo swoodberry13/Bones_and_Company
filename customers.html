@@ -6,6 +6,7 @@
 	<title>Customers</title>
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="customers.css">
 </head>
 <body>
 	<div class= "header">
@@ -34,6 +35,96 @@
 			<li class="itemMenu"><a href="customers.html">Customers</a></li>
 		</ul>
 	</div>
+
+	<body>
+		<div class="hero-image">
+			<div class="hero-text">
+			  <h1 style="font-size:50px; font-style: italic;">We love your pets!</h1>
+			</div>
+		  </div>
+	</body>
+
+
+<h1 style="text-align: center; font-style: italic;">At Bones and Company, we love your pets!</h2>
+<p>Finding a compassionate and caring pet vet who takes your pet’s health personally can be hard to do.</p> 
+<p>At Bones and Company, our staff is dedicated to providing exceptionally kind and loving medical care.</p> 
+<p>Now accepting new clients!  Call 123.456.7890</p> 
+<p>“We strive to exceed our clients' expectations by treating owners and their pets with respect, honesty, and compassion - and 
+	treating all animals as if they were our own.” - Dr. Suzy Bones, practice owner and pet vet</p> 
+<p>To see how much the staff at B&C loves caring for your pet, just take a look at our “Happy Customers"!</p> 
+<p>Is your pet at B&C? Share a photo with us to be included in the slideshow!</p> 
+<br>
+
+	<h2 style = "text-align: center">Happy Customers</h1>
+
+	<div class="slideshow-container"; style="text-align: center">
+
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+		  <img src="mabel.jpg" style="width:30%">
+		  <div class="text">Mabel</div>
+		</div>
+		
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 3</div>
+		  <img src="domino.jpeg" style="width:30%">
+		  <div class="text">Domino</div>
+		</div>
+		
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 3</div>
+		  <img src="stella.jpeg" style="width:30%">
+		  <div class="text">Stella</div>
+		</div>
+
+		<!-- <div class="mySlides fade">
+			<div class="numbertext">4 / 4</div>
+			<img src="charlie.jpeg" style="width:30%">
+			<div class="text">Charlie</div>
+		  </div> -->
+		
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+		
+		</div>
+		<br>
+		
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>	
+<div id="bannerimage"></div>
+
 
 </body>
 </html>
