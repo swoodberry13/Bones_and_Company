@@ -30,6 +30,7 @@ body{
 /*	background-color: #edae49;*/
 	right: 0px;
 	top: 0px;
+	z-index:100;
 }
 #top_banner{
 /*	margin-top: 0px;
