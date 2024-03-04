@@ -9,7 +9,9 @@ yellow(dark): #edae49
 */
 p,h1,h2,h3{
 	font-family: Verdana, Arial, sans-serif;
-	font-weight: normal;}
+	font-weight: normal;
+	color: #0e3b43;
+}
 
 body{
 	background-color: #E1EFF6;
