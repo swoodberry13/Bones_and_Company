@@ -4,7 +4,8 @@ link:https://coolors.co/e1eff6-124a54-ffffff-a5d7f9-edae49
 dark teal: #0e3b43 orr #124A54 (lighter)
 very light blue: #E1EFF6
 light blue: #A5D7F9 ---> lighter #b1defc
-yellow(dark): #edae49
+yellow: #edae49
+outline for yellow: #ba8838
 #ffffff
 */
 p,h1,h2,h3{
@@ -17,49 +18,83 @@ body{
 	background-color: #E1EFF6;
 	margin: 0;
 }
+
+
 /*footer CSS*/
-.footer{
+#footer{
 	position: static;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 30vw;
-  background: url('./images/footer.png') repeat-x;
+  max-height: 150px;
+  background-color: rgba(237, 174, 73, 0.63);
+  padding: 0px;
+  margin-top: 10vw;
 }
 
+#footer_print{/* styling for foot print design in footer */
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height:150px;
+	background: url('./images/footer.png') repeat-x;
+}
 /*styling for dog image in footer*/
-.footer_dog{
-	max-height: 25vw;
+#footer_dog{
+	max-height: 140px;
 	float: right;
-	margin-right: 8vw;
+	margin-top: 8px;
+	margin-right: 6vw;
+
+}
+.footer_links{
+	list-style-type: none;
+	position: absolute;
+	margin-top: 10vw;
+	padding-left: 20px;
+}
+.footer_links li{
+	display: inline-block;
+	background-color: #b1defc;
+	border-radius: 3px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1.4vw;
+	padding-right: 1.4vw;
+	margin-left: 4vw;
+}
+.footer_links li a{
+	text-decoration: none;
+	color: #0e3b43;
+	font-family: Verdana, Arial, sans-serif;
+}
+@media (max-width: 800px) {
+	#footer_dog{
+		display: none;
+	} 
 }
 
+/* end of footer CSS*/
 
 
-/*footer CSS*/
 
 /*BANNER AND MENU STUFF*/
 .header{
 	position:sticky;
 	top: 0%;
+	right: 0px;
 	width:100%;
 	padding: 0px;
-/*	margin-top: 0px;*/
 
 	display: block;
-/*	height: max-content;*/
-	z-index:100;
-/*	background-color: #edae49;*/
-	right: 0px;
-	top: 0px;
-	z-index:100;
+	z-index:100; /*so it lays on top of everything*/
 }
 #top_banner{
-/*	margin-top: 0px;
-	padding-top: 0px;*/
+
 	width:100%;
 	height: max-content;
 	background-color: #edae49;
+	border-bottom: .2px solid #ba8838;
 }
 #menuIMG{
 	position: absolute;
@@ -96,9 +131,7 @@ body{
 
 }
 .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{
-		border-bottom-left-radius: 4px;
-	}
+	a{border-bottom-left-radius: 4px;}
 }
 #menu {
   list-style-type: none;
@@ -107,8 +140,8 @@ body{
   top: 0;
   display: none;
 }
-/* END OF BANNER AND MENU STUFF*/
 
+/* END OF BANNER AND MENU STUFF*/
 .textblock1{
 	background-color:#A5D7F9;
 	margin-left: 4vw;
