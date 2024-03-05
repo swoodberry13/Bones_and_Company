@@ -6,12 +6,19 @@
 	<title>Contact</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-
-    <style>
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("mabelboat.JPG");
-        }
-        .hero-text {
+	<style type="text/css">
+		/* Hero Image*/
+		.hero-image {
+		    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("mabelboat.JPG");
+		    height: 500px;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    position: relative;
+		    margin:0; 
+		  }
+		  
+		  .hero-text {
 		    text-align: center;
 		    position: absolute;
 		    top: 50%;
@@ -19,21 +26,22 @@
 		    transform: translate(-50%, -50%);
 		    h1{color: #ffffff;}
 		  }
-        .contactFlex{
-        	display: flex;
-        	flex-wrap: wrap;
-        	margin: 8px;
-        	gap: 12px;
-        	background-color: #ffffff;
-        	border-radius: 14px;
-
-        	contact_item1,contact_item2,contact_item3{
-        		flex: 33%;
-        		margin: 4px;
-
+		  .contactFlex{
+			  	display: flex;
+			  	flex-wrap: wrap;
+			  	contact_item1{
+			  		flex: 33%;
+			  	}
+			  	contact_item2{
+			  		flex: 33%;
+			  	}
+			  	contact_item3{
+			  		flex: 33%;
+			  	}
 		  }
-		  h3 {padding-left:10px}
-    </style>
+
+
+	</style>
 </head>
 <body>
 	<div class= "header">
@@ -63,9 +71,11 @@
 		</ul>
 	</div>	
 
+
+
 	<div class="hero-image">
 		<div class="hero-text">
-		  <h1>Contact Us</h1>
+		  <h1 style="font-size:50px; font-style: italic;">Contact Us</h1>
 		</div>
 	  </div>
 
@@ -91,8 +101,8 @@
 		<p>Weekends: Closed</p>
 	</div>
 </div>
-<h2 style="font-style: italic;">"Nurturing the human-animal bond through exceptional and compassionate care."</h2>
-<p style="text-align:center; ">Schedule your appointment today! We look forward to meeting you.</p>
+<h2 style="font-style: italic;">Nurturing the human-animal bond through exceptional and compassionate care.</h2>
+<p>Schedule your appointment today! We look forward to meeting you.</p>
 </div>
 </body>
 </html>
