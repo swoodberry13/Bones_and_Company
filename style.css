@@ -166,8 +166,10 @@ body{
   top: 0;
   display: none;
 }
-
 /* END OF BANNER AND MENU STUFF*/
+
+
+
 .textblock1{
 	background-color:#A5D7F9;
 	margin-left: 4vw;
@@ -189,7 +191,7 @@ body{
 			padding-right: 1.5vw;
 
 		 }
-		 h2,h1,h3{
+		 h2,h1{
 		 	position: relative;
 		 	text-align: center;
 		 	color: #ffffff;
