@@ -7,11 +7,13 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
     <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("images/husky.jpeg");
+        }
         .container {
-            display: block;
-            margin: auto;
-            text-align: center;
-            border: 1px solid blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .grid {
             display: grid;
@@ -22,7 +24,7 @@
             justify-content: center;
             align-items: stretch;
             padding: 2vw 4vw;
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
         .grid-item {
             display: flex; 
@@ -101,9 +103,12 @@
             <li class="itemMenu"><a href="customers.html">Customers</a></li>
         </ul>
     </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Meet Our Staff</h1>
+        </div>
+    </div>
     <div class="container">
-        
-        <h1>Meet Our Staff</h1>
         <h2>Veterinarians</h2>
         <div class="grid">
             <div class="grid-item">
