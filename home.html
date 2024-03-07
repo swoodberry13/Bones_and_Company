@@ -14,15 +14,21 @@
 		/* video container styles */
 		.video-container {
 			position: relative;
+            display: block;
 			height: 100vh;
 			overflow: hidden;
 		}
 
 		/* video styles */
 		video {
-			width: 100%;
-			height: auto;
+			height: 100%;
+            width: 100%;
 			position: absolute;
+            object-fit: cover;
+		}
+
+		.video-container video {
+			filter: saturate(150%) brightness(1.1);
 		}
 
 		/* overlay text styles */
@@ -46,16 +52,6 @@
 		.overlay-text p {
 			font-size: 1.5em;
 /*			margin-top: 20px;*/
-		}
-
-        .video-container {
-            display: block;
-        }
-
-		.video-container video {
-			filter: saturate(150%) brightness(1.1);
-            width: 100%;
-            object-fit: cover;
 		}
 
 		/* END OF BACKGROUND STYLE */
