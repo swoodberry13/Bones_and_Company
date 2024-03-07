@@ -95,6 +95,11 @@
 			padding: 5vw 10vw;
 		}
 
+        .team-section {
+            flex-direction: row-reverse;
+            gap: 20px;
+        }
+
 		/* END OF SECTION STYLE */
 
 
@@ -102,26 +107,28 @@
 
 		.services-image {
 			width: 25%;
+            min-width: 150px;
 			max-width: 100%; 
 			max-height: 100%;
 			border-radius: 20px;
 			margin-right: 3vw;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
 		}
 
 		.service-dog-img {
 			width: 100%;
+            border-radius: 20px;
 		}
 
 		.services-content {
 			position: relative;
-			text-align: left;
+            text-align: left;
 			width: 75%;
 		}
 
 		.care-types {
 			display: flex;
+            flex-wrap: wrap;
 			justify-content: space-between;
 		}
 
@@ -156,6 +163,7 @@
 
 		.team-image {
 			width: 50%;
+            min-width: 150px;
 			display: flex;
 			justify-content: flex-end;
 		}
@@ -167,6 +175,18 @@
 		}
 
 		/* END OF TEAM STYLE */
+
+        @media (max-width: 750px) {
+            .services-section, .team-section {
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 900px) {
+            
+        }
+        @media (max-width: 1300px) {
+            
+        }
 
 	</style>
 </head>
@@ -237,14 +257,13 @@
 	</div>
 
 	<div class="team-section">
+        <div class="team-image">
+			<img src="./images/team.jpg" alt="Team Image" class="team-photo-img">
+		</div>
 		<div class="team-content">
 			<h1>Our Team</h1>
 			<p>Our friendly and dedicated team is committed to providing excellent care for your pets.</p>
 			<a href="meetStaff.html" class="button">MEET THE TEAM</a>
-		</div>
-
-		<div class="team-image">
-			<img src="./images/team.jpg" alt="Team Image" class="team-photo-img">
 		</div>
 	</div>
 
