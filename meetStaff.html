@@ -17,9 +17,10 @@
         }
         .grid {
             display: grid;
-            height:max-content;
-            grid-template-columns: repeat(1, 330px);
+            height: max-content;
+            grid-template-columns: repeat(3, 330px);
             grid-template-rows: auto;
+            column-gap: 3vw;
             row-gap: 3vw;
             justify-content: center;
             align-items: stretch;
@@ -58,22 +59,25 @@
             background-image: url(images/drkatz.jpeg);
              /* https://www.hindustantimes.com/lifestyle/pet/national-take-your-cat-to-the-vet-day-why-your-cat-needs-regular-checkups-101692631561644.html */
         }
-        @media (min-width: 750px) {
+
+        @media (max-width: 1300px) {
+            .grid {
+                grid-template-columns: repeat(2, 330px);
+                column-gap: 40px;
+            }
+        }
+        
+        @media (max-width: 900px) {
             .grid {
                 grid-template-columns: repeat(2, 330px);
                 column-gap: 20px;
             }
         }
-        @media (min-width: 900px) {
+        
+        @media (max-width: 750px) {
             .grid {
-                grid-template-columns: repeat(2, 330px);
-                column-gap: 40px;
-            }
-        }
-        @media (min-width: 1300px) {
-            .grid {
-                grid-template-columns: repeat(3, 330px);
-                column-gap: 40px;
+                grid-template-columns: repeat(1, 330px);
+                column-gap: 20px;
             }
         }
   
