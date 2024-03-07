@@ -8,7 +8,53 @@
 	<link rel="stylesheet" href="style.css">
     <style>
         .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("images/cat.jpeg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("images/cooper.jpg");
+            background-position: 0% 20%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid {
+            display: grid;
+            height:max-content;
+            grid-template-columns: repeat(1, 330px);
+            grid-template-rows: auto;
+            row-gap: 3vw;
+            justify-content: center;
+            align-items: stretch;
+            padding: 2vw 4vw;
+            /* border: 1px solid black; */
+        }
+        .grid-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            background-color: #A5D7F9;
+            border-radius: 1rem;
+            padding: 1.5vw;
+        }
+        div.grid-item > h3 {
+            font-weight: bold;
+        }
+        @media (min-width: 750px) {
+            .grid {
+                grid-template-columns: repeat(2, 330px);
+                column-gap: 20px;
+            }
+        }
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 330px);
+                column-gap: 40px;
+            }
+        }
+        @media (min-width: 1300px) {
+            .grid {
+                grid-template-columns: repeat(3, 330px);
+                column-gap: 40px;
+            }
         }
     </style>
 </head>
@@ -45,5 +91,53 @@
             <h1>Services</h1>
         </div>
     </div>
+
+    <div class="container">
+        <h2>What We Offer</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>Wellness Care</h3>
+                    <p>Ensure your pets stay healthy with regular wellness check-ups and preventive care.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Urgent Care</h3>
+                    <p>Get immediate attention for your pets in case of emergencies and urgent situations.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Dental Care</h3>
+                    <p>Maintain your pet's oral health with our professional dental care services.</p>
+                    <ul>
+                        <li>Cleaning and polishing</li>
+                        <li>Full-mouth x-rays</li>
+                        <li>Oral surgery</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>Telehealth</h3>
+                    <p>Receive expert advice from the comfort of your home with our telehealth appointments.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Surgery</h3>
+                    <p>Receive the best scheduled and emergency surgical care for your pet with our renowned team.</p>
+                    <ul>
+                        <li>Spaying and neutering</li>
+                        <li>Wound repair</li>
+                        <li>Oral surgery</li>
+                        <li>Tumor removal</li>
+                        <li>Gastrointestinal surgery</li>
+                        <li>Bladder surgery</li>
+                        <li>Eye removal</li>
+                        <li>Spleen removal</li>
+                        <li>Knee and leg surgery</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>Microchipping</h3>
+                    <p>Keep your pet safe with our microchipping services.</p>
+                </div>
+            </div>
+    </div>
+
+
 </body>
 </html>
