@@ -23,7 +23,8 @@ p,h1,h2,h3{
 	font-weight: normal;
 	color: #0e3b43;
 }
-
+a{font-family: Verdana, Arial, sans-serif;
+	font-weight: normal;}
 body{
 	background-color: #E1EFF6;
 	margin: 0;
@@ -107,6 +108,7 @@ body{
 	padding-right: 1.4vw;
 	margin-top: 8vw;
 	margin-left: 4vw;
+	transition: opacity 0.3s ease;
 }
 .footer_links li a{
 	text-decoration: none;
@@ -116,11 +118,8 @@ body{
 
 /*hover effect*/
 .footer_links li:hover{ /*hover effect for footer buttons*/
+
 	background-color: #ffffff;
-	border: 1px solid #E1EFF6;
-	.footer_links li a{
-		color: #76A9CB;
-	}
 }
 
 /*footer resizing css*/
@@ -204,6 +203,12 @@ body{
   padding:0;
   top: 0;
   display: none;
+}
+
+/*hover effect*/
+.itemMenu a:hover{
+	color:#A5D7F9;
+	background-color: #ffffff;
 }
 /* END OF BANNER/MENU STUFF*/
 
