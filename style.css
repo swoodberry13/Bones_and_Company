@@ -102,12 +102,13 @@ body{
 	border: 1px solid #76A9CB;
 
 	border-radius: 3px;
-	padding-top: 1vw;
-	padding-bottom: 1vw;
+	padding-top: .8vw;
+	padding-bottom: .8vw;
 	padding-left: 1.4vw;
 	padding-right: 1.4vw;
-	margin-top: 8vw;
+	margin-top: 4vw;
 	margin-left: 4vw;
+
 	transition: opacity 0.3s ease;
 }
 .footer_links li a{
@@ -212,7 +213,31 @@ body{
 }
 /* END OF BANNER/MENU STUFF*/
 
+/*GENERIC LINK STYLING*/
+.linkBlock{
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #124A54;
+	border: 2px solid #0E3B43;
 
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+.linkBlock:hover{
+	background-color: #edae49;
+	border: 2px solid #BA8838
+}
+.linkBlock:after {
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.linkBlock:hover:after {
+	opacity: 1;
+		}
+/*END OF GENERIC LINK STYLING*/
 
 .textblock1{
 	background-color:#A5D7F9;

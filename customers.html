@@ -7,12 +7,6 @@
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
 	<style type="text/css">
-		#bannerimage {
-		  width: 100%;
-		  background-image: url("pawprints.jpg");
-		  height: 400px;
-		  background-position: center;
-		}
 
 		/* Slideshow container */
 		.slideshow-container {
@@ -245,18 +239,40 @@
 		  
 		}
 		</script>
-	</div>	
-	<div id="bannerimage"></div>
-
-<div id="footer">
-	<div id="footer_print">
-		<img id="footer_dog" src="./images/footer_dog.png">
-		<ul class="footer_links">
-			<li><a href="contact.html">Contact Us</a></li>
-			<li><a href="resources.html">Resources</a></li>
-			<li><a href="book.html">Booking</a></li>
-		</ul>
 	</div>
-</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $("button").click(function(){
+			$("#div1").fadeIn("slow");
+			$("#div2").fadeIn("slow");
+			$("#div3").fadeIn("slow");
+		  });
+		});
+		</script>
+	<button class="linkBlock">Click to see real customer reviews!</button><br><br>
+<div id="div1" style="width:700px;height:100px;display:none;background-color:#A5D7F9">My pet was in pain for almost 2 months and after getting wrong information from another 
+	vet we decided to come to Bones and Company, they figured out the problem and solved it in about 25 minutes. 
+	My pet and I were both relieved and I'm so grateful for the wonderful nurses and doctors here. 
+	I came in with the expectation of paying a lot of money but was pleasantly surprised as their costs are pretty reasonable. 
+	I look forward to making this my permanent vet.</div><br>
+<div id="div2" style="width:700px;height:100px;display:none;background-color:#A5D7F9">Level of care my pets have received at B&C is unprecedented. 
+	Great veterinary clinic. Only vet I'll ever bring my animals to. 
+	I'm probably gonna butcher her name but Dr. Maragolus is amazing. 
+	If you need a vet I'd strongly recommend this clinic</div><br>
+<div id="div3" style="width:700px;height:100px;display:none;background-color:#A5D7F9">I have been going there for years and have always had professional, friendly service and advice. 
+	The care is excellent and I don't hesitate to recommend them.</div>
+	<br>
+	<div id="footer">
+		<div id="footer_print">
+			<img id="footer_dog" src="./images/footer_dog.png">
+			<ul class="footer_links">
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="resources.html">Resources</a></li>
+				<li><a href="book.html">Booking</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
