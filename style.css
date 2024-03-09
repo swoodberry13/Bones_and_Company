@@ -1,5 +1,5 @@
 /*colors
-link:https://coolors.co/e1eff6-124a54-ffffff-a5d7f9-edae49
+https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 
 dark teal: #0e3b43 orr #124A54 (lighter)
 very light blue: #E1EFF6
@@ -8,6 +8,16 @@ yellow: #edae49
 outline for yellow: #ba8838
 #ffffff
 */
+button{
+			padding: 10px 20px;
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #edae49;
+			border: 2px solid #edae49;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			cursor: pointer;
+}
 p,h1,h2,h3{
 	font-family: Verdana, Arial, sans-serif;
 	font-weight: normal;
@@ -18,6 +28,7 @@ body{
 	background-color: #E1EFF6;
 	margin: 0;
 }
+
 
 /* Hero Image*/
 .hero-image {
@@ -46,7 +57,8 @@ body{
   }
 
 
-/*footer CSS*/
+
+/*----------FOOTER CSS----------*/
 #footer{
 	position: static;
   left: 0;
@@ -73,20 +85,27 @@ body{
 	margin-right: 6vw;
 
 }
-.footer_links{
+
+.footer_links{/*links in footer*/
 	list-style-type: none;
-	position: absolute;
+	position: relative;
 	margin-top: 10vw;
 	padding-left: 20px;
+
 }
 .footer_links li{
 	display: inline-block;
+	cursor: pointer;
+
 	background-color: #b1defc;
+	border: 1px solid #76A9CB;
+
 	border-radius: 3px;
 	padding-top: 1vw;
 	padding-bottom: 1vw;
 	padding-left: 1.4vw;
 	padding-right: 1.4vw;
+	margin-top: 8vw;
 	margin-left: 4vw;
 }
 .footer_links li a{
@@ -94,17 +113,38 @@ body{
 	color: #0e3b43;
 	font-family: Verdana, Arial, sans-serif;
 }
-@media (max-width: 800px) {
+
+/*hover effect*/
+.footer_links li:hover{ /*hover effect for footer buttons*/
+	background-color: #ffffff;
+	border: 1px solid #E1EFF6;
+	.footer_links li a{
+		color: #76A9CB;
+	}
+}
+
+/*footer resizing css*/
+@media (max-width: 800px) {/* makes dog go away and centers links in footer*/
 	#footer_dog{
 		display: none;
 	} 
+	.footer_links{
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.footer_links li{
+		margin-top: 10vw;
+		margin-left:4vw;
+		margin-right: 4vw;
+	}
 }
 
-/* end of footer CSS*/
+/*----------END OF FOOTER CSS----------*/
 
 
 
-/*BANNER AND MENU STUFF*/
+/*----------BANNER /MENU STUFF----------*/
 .header{
 	position:sticky;
 	top: 0%;
@@ -116,19 +156,10 @@ body{
 	z-index:100; /*so it lays on top of everything*/
 }
 #top_banner{
-
 	width:100%;
 	height: max-content;
 	background-color: #edae49;
 	border-bottom: .2px solid #ba8838;
-}
-#menuIMG{
-	position: absolute;
-	display: inline-block;
-	max-height: 30px;
-	right:1vw;
-	top: 1vw;
-	cursor: pointer;
 }
 #logo{
 	max-height: 62px;
@@ -137,6 +168,15 @@ body{
 	padding-top: 4px;
 }
 
+/*--------MENU CSS--------*/
+#menuIMG{
+	position: absolute;
+	display: inline-block;
+	max-height: 30px;
+	right:1vw;
+	top: 1vw;
+	cursor: pointer;
+}
 .itemMenu a{
 	float:right;
 
@@ -152,8 +192,7 @@ body{
 	color: #ffffff;
 	border-left: 3px solid #edae49;
 	border-bottom: 3px solid #edae49;
-
-	 box-shadow: -2px 1px 6px #227e8f;
+	box-shadow: 0px 1px #ba8838;/*gives additional dark yellow small border so menu pops*/
 
 }
 .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
@@ -166,7 +205,7 @@ body{
   top: 0;
   display: none;
 }
-/* END OF BANNER AND MENU STUFF*/
+/* END OF BANNER/MENU STUFF*/
 
 
 
