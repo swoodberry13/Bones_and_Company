@@ -55,11 +55,51 @@ body{
 	z-index:100; /*so it lays on top of everything*/
 }
 #top_banner{
-	width:100%;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 	height: max-content;
 	background-color: #edae49;
-	border-bottom: .3px solid #ba8838;
+	border-bottom: .2px solid #ba8838;
+    padding: 10px;
 }
+
+/*--------MENU CSS--------*/
+#menuIMG{
+	display: none;
+	cursor: pointer;
+}
+
+#horizontal-menu {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+ul#horizontal-menu > li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+ul#horizontal-menu > li > a:hover {
+    color: #0e3b43;
+}
+
+@media (max-width: 900px) {
+    #menuIMG {
+	    display: inline-block;
+	    max-height: 30px;
+	    cursor: pointer;
+
+    }
+    #horizontal-menu {
+        display: none;
+    }
+}
+
 #logo{
 	max-height: 62px;
 	position: center;
@@ -67,22 +107,13 @@ body{
 	padding-top: 4px;
 }
 
-/*--------MENU CSS--------*/
-#menuIMG{
-	position: absolute;
-	display: inline-block;
-	max-height: 30px;
-	right:1vw;
-	top: 1vw;
-	cursor: pointer;
-}
 .itemMenu a{
-	float:right;
+	/* float:right; */
 
 	display: block;
 	padding: 10px 10px;
 
-	background-color: #A5D7F9;
+	/* background-color: #A5D7F9; */
 	text-decoration: none;
 	font-family: Verdana, Arial, sans-serif;
 
@@ -91,24 +122,34 @@ body{
 	color: #ffffff;
 	border-left: 3px solid #edae49;
 	border-bottom: 3px solid #edae49;
-	box-shadow: 0px 1px #ba8838;/*gives additional dark yellow small border so menu pops*/
+	/* box-shadow: 0px 1px #ba8838;gives additional dark yellow small border so menu pops */
 
-}
-.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{border-bottom-left-radius: 4px;}
-}
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding:0;
-  top: 0;
-  display: none;
 }
 
 /*hover effect*/
 .itemMenu a:hover{
-	color:#A5D7F9;
-	background-color: #ffffff;
+	/* color:#A5D7F9;
+	background-color: #ffffff; */
+    color: #0e3b43;
+}
+
+.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
+	a{border-bottom-left-radius: 4px;}
+}
+
+#menu {
+    background-color: #A5D7F9;
+    box-shadow: -2px 1px 6px #227e8f;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    visibility: collapse;
 }
 
 /*---------- END OF BANNER/MENU STUFF----------*/
