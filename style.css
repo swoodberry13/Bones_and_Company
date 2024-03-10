@@ -59,6 +59,81 @@ body{
 
 
 
+
+/*----------BANNER /MENU STUFF----------*/
+.header{
+	position:sticky;
+	top: 0%;
+	right: 0px;
+	width:100%;
+	padding: 0px;
+
+	display: block;
+	z-index:100; /*so it lays on top of everything*/
+}
+#top_banner{
+	width:100%;
+	height: max-content;
+	background-color: #edae49;
+	border-bottom: .3px solid #ba8838;
+}
+#logo{
+	max-height: 62px;
+	position: center;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+
+/*--------MENU CSS--------*/
+#menuIMG{
+	position: absolute;
+	display: inline-block;
+	max-height: 30px;
+	right:1vw;
+	top: 1vw;
+	cursor: pointer;
+}
+.itemMenu a{
+	float:right;
+
+	display: block;
+	padding: 10px 10px;
+
+	background-color: #A5D7F9;
+	text-decoration: none;
+	font-family: Verdana, Arial, sans-serif;
+
+	text-align: center;
+	font-size: 70%;
+	color: #ffffff;
+	border-left: 3px solid #edae49;
+	border-bottom: 3px solid #edae49;
+	box-shadow: 0px 1px #ba8838;/*gives additional dark yellow small border so menu pops*/
+
+}
+.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
+	a{border-bottom-left-radius: 4px;}
+}
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  top: 0;
+  display: none;
+}
+
+/*hover effect*/
+.itemMenu a:hover{
+	color:#A5D7F9;
+	background-color: #ffffff;
+}
+
+/* END OF BANNER/MENU STUFF*/
+
+
+
+
+
 /*----------FOOTER CSS----------*/
 #footer{
 	position: static;
@@ -113,14 +188,17 @@ body{
 }
 .footer_links li a{
 	text-decoration: none;
-	color: #0e3b43;
+	color:  #ffffff;
 	font-family: Verdana, Arial, sans-serif;
 }
 
 /*hover effect*/
 .footer_links li:hover{ /*hover effect for footer buttons*/
-
 	background-color: #ffffff;
+	border: 1px solid #E1EFF6;
+}
+.footer_links li:hover .my_footer_link{
+	color:#A5D7F9;
 }
 
 /*footer resizing css*/
@@ -143,75 +221,6 @@ body{
 /*----------END OF FOOTER CSS----------*/
 
 
-
-/*----------BANNER /MENU STUFF----------*/
-.header{
-	position:sticky;
-	top: 0%;
-	right: 0px;
-	width:100%;
-	padding: 0px;
-
-	display: block;
-	z-index:100; /*so it lays on top of everything*/
-}
-#top_banner{
-	width:100%;
-	height: max-content;
-	background-color: #edae49;
-	border-bottom: .2px solid #ba8838;
-}
-#logo{
-	max-height: 62px;
-	position: center;
-	padding-left: 10px;
-	padding-top: 4px;
-}
-
-/*--------MENU CSS--------*/
-#menuIMG{
-	position: absolute;
-	display: inline-block;
-	max-height: 30px;
-	right:1vw;
-	top: 1vw;
-	cursor: pointer;
-}
-.itemMenu a{
-	float:right;
-
-	display: block;
-	padding: 10px 10px;
-
-	background-color: #A5D7F9;
-	text-decoration: none;
-	font-family: Verdana, Arial, sans-serif;
-
-	text-align: center;
-	font-size: 70%;
-	color: #ffffff;
-	border-left: 3px solid #edae49;
-	border-bottom: 3px solid #edae49;
-	box-shadow: 0px 1px #ba8838;/*gives additional dark yellow small border so menu pops*/
-
-}
-.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{border-bottom-left-radius: 4px;}
-}
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding:0;
-  top: 0;
-  display: none;
-}
-
-/*hover effect*/
-.itemMenu a:hover{
-	color:#A5D7F9;
-	background-color: #ffffff;
-}
-/* END OF BANNER/MENU STUFF*/
 
 /*GENERIC LINK STYLING*/
 .linkBlock{
