@@ -52,16 +52,9 @@
 
 		.overlay-text p {
 			font-size: 1.5em;
-/*			margin-top: 20px;*/
 		}
 
 		/* END OF BACKGROUND STYLE */
-
-
-		/* BUTTON STYLE */
-/*class="my_footer_link"*/
-
-		/* END OF BUTTON STYLE */
 
 
 		/* SECTION STYLE */
@@ -172,6 +165,8 @@
 					var menu = document.getElementById('menu');
 					// if (x.style.display === "block") {x.style.display = "none";}
 					// else {x.style.display = "block";}
+					t = window.innerWidth;
+					console.log(t);
                     if (menu.style.visibility === "visible") {menu.style.visibility = "collapse";}
                     else {menu.style.visibility = "visible";}
 				}
