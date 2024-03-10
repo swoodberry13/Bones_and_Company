@@ -1,16 +1,7 @@
 /*color palette:
 https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 */
-button{
-			padding: 10px 20px;
-			text-decoration: none;
-			color: #ffffff;
-			background-color: #edae49;
-			border: 2px solid #edae49;
-			border-radius: 5px;
-			transition: all 0.3s ease;
-			cursor: pointer;
-}
+
 p,h1,h2,h3{
 	font-family: Verdana, Arial, sans-serif;
 	font-weight: normal;
@@ -21,6 +12,7 @@ a{font-family: Verdana, Arial, sans-serif;
 body{
 	background-color: #E1EFF6;
 	margin: 0;
+	overflow: auto;
 }
 
 
