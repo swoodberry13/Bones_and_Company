@@ -169,11 +169,12 @@
 		<div id="top_banner">
 			<script type="text/javascript">
 				function showMenu() {/*script for top navbar*/
-					var x= document.getElementById('menu');
+					var menu = document.getElementById('menu');
+                    var horizontalMenu = document.getElementById('horizontal-menu');
 					// if (x.style.display === "block") {x.style.display = "none";}
 					// else {x.style.display = "block";}
-                    if (x.style.visibility === "visible") {x.style.visibility = "collapse";}
-                    else {x.style.visibility = "visible";}
+                    if ((menu.style.visibility === "visible") || ()) {menu.style.visibility = "collapse";}
+                    else {menu.style.visibility = "visible";}
 				}
 			</script>
 
