@@ -1,12 +1,5 @@
-/*colors
+/*color palette:
 https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
-
-dark teal: #0e3b43 orr #124A54 (lighter)
-very light blue: #E1EFF6
-light blue: #A5D7F9 ---> lighter #b1defc
-yellow: #edae49
-outline for yellow: #ba8838
-#ffffff
 */
 button{
 			padding: 10px 20px;
@@ -31,7 +24,7 @@ body{
 }
 
 
-/* Hero Image*/
+/* ----------Hero Image----------*/
 .hero-image {
     
     height: 500px;
@@ -58,9 +51,7 @@ body{
   }
 
 
-
-
-/*----------BANNER /MENU STUFF----------*/
+/*--------------------BANNER /MENU STUFF--------------------*/
 .header{
 	position:sticky;
 	top: 0%;
@@ -128,13 +119,13 @@ body{
 	background-color: #ffffff;
 }
 
-/* END OF BANNER/MENU STUFF*/
+/*---------- END OF BANNER/MENU STUFF----------*/
 
 
 
 
 
-/*----------FOOTER CSS----------*/
+/*--------------------FOOTER CSS--------------------*/
 #footer{
 	position: static;
   left: 0;
@@ -161,7 +152,7 @@ body{
 	margin-right: 6vw;
 
 }
-
+/*------FOOTER LINKS------*/
 .footer_links{/*links in footer*/
 	list-style-type: none;
 	position: relative;
@@ -192,7 +183,7 @@ body{
 	font-family: Verdana, Arial, sans-serif;
 }
 
-/*hover effect*/
+/*------HOVER EFFECTS------*/
 .footer_links li:hover{ /*hover effect for footer buttons*/
 	background-color: #ffffff;
 	border: 1px solid #E1EFF6;
@@ -201,7 +192,7 @@ body{
 	color:#A5D7F9;
 }
 
-/*footer resizing css*/
+/*------RESPONSIVE FOOTER STUFF------*/
 @media (max-width: 800px) {/* makes dog go away and centers links in footer*/
 	#footer_dog{
 		display: none;
@@ -217,12 +208,11 @@ body{
 		margin-right: 4vw;
 	}
 }
-
 /*----------END OF FOOTER CSS----------*/
 
 
 
-/*GENERIC LINK STYLING*/
+/*----------GENERIC LINK STYLING----------*/
 .linkBlock{
 	display: inline-block;
 	padding: 10px 20px;
@@ -246,7 +236,12 @@ body{
 .linkBlock:hover:after {
 	opacity: 1;
 		}
-/*END OF GENERIC LINK STYLING*/
+/*----------END OF GENERIC LINK STYLING----------*/
+
+
+
+
+
 
 .textblock1{
 	background-color:#A5D7F9;
