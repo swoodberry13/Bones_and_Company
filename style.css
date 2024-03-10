@@ -234,7 +234,8 @@ body{
 
 
 
-
+/*BASIC TEXT BLOCK*/
+/*this is just css for the generic text block that we use on a lot of our pages*/
 .textblock1{
 	background-color:#A5D7F9;
 	margin-left: 4vw;

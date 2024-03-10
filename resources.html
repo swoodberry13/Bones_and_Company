@@ -11,6 +11,18 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("images/ollie.jpg");
             background-position: 0% 30%;
         }
+        .flexBox{
+        	display: flex;
+        	flex-wrap: wrap;
+        	margin: 8px;
+        	gap: 12px;
+        	background-color: #ffffff;
+        	border-radius: 14px;
+        }
+        .flexItem{
+        	flex: 33%;
+        	margin: 4px;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +43,7 @@
 			</div>	
 		</div>
 		<ul id="menu">
-
+			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
 			<li class="itemMenu"><a href="services.html">Services</a></li>
 			<li class="itemMenu"><a href="resources.html">Resources</a></li>
@@ -46,6 +58,25 @@
             <h1>Resources</h1>
         </div>
     </div>
+
+<div class="textblock1">
+	<div class="block1Title"><h2>Emergencies</h2></div>
+	<p>If your pet needs emergency care outside of our office hours please reach out to one of the following services</p>
+	<div class="flexBox">
+		<div class="flexItem">
+			<h3>Tufts Vets</h3>
+			<a href="https://tuftsvets.org/">Website</a>
+			<p>Address: 525 South Street, Walpole, MA 02081</p>
+			<p>508-668-5454</p>
+		</div>
+		<div class="flexItem">
+		</div>
+	</div>
+
+
+</div>
+
+
 <div id="footer">
 	<div id="footer_print">
 		<img id="footer_dog" src="./images/footer_dog.png">
