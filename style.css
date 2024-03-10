@@ -152,6 +152,15 @@ ul#horizontal-menu > li > a:hover {
     visibility: collapse;
 }
 
+/* this makes sure the dropdown menu is never visible when the horizontal menu
+is visible, but doesn't completely fix the problem because when you make the
+window smaller again, the dropdown should also not be visible */
+@media (min-width: 900px) {
+    #menu {
+        visibility: collapse !important;
+    }
+}
+
 /*---------- END OF BANNER/MENU STUFF----------*/
 
 
