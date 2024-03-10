@@ -41,12 +41,13 @@
 			color: #ffffff;
 
 			/* adds shadow to the text in front of the background vid*/
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/*			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 		}
 
 		.overlay-text h1 {
 			font-size: 3em;
 			font-weight: 700;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 		}
 
 		.overlay-text p {
@@ -58,31 +59,7 @@
 
 
 		/* BUTTON STYLE */
-		.button {
-			display: inline-block;
-			padding: 10px 20px;
-			text-decoration: none;
-			color: #ffffff;
-			background-color: #edae49;
-			border: 2px solid #edae49;
-			border-radius: 5px;
-			transition: all 0.3s ease;
-		}
-
-		.button:hover {
-			background-color: #124A54;
-			border: 2px solid #124A54;
-		}
-
-		.button:after {
-			display: inline-block;
-			opacity: 0;
-			transition: opacity 0.3s ease;
-		}
-
-		.button:hover:after {
-			opacity: 1;
-		}
+/*class="my_footer_link"*/
 
 		/* END OF BUTTON STYLE */
 
@@ -219,6 +196,7 @@
 		</div>
         <!-- hamburger dropdown menu -->
 		<ul id="menu">
+			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
 			<li class="itemMenu"><a href="services.html">Services</a></li>
 			<li class="itemMenu"><a href="resources.html">Resources</a></li>
@@ -236,7 +214,7 @@
         <div class="overlay-text">
             <h1>Bones & Company</h1>
             <p>Excellent pets deserve excellent care.</p>
-            <a href="book.html" class="button">BOOK APPOINTMENT</a>
+            <a href="book.html" class="linkBlock">BOOK APPOINTMENT</a>
         </div>
     </div>
 
@@ -261,7 +239,7 @@
 					<p>Maintain your pet's oral health with our professional dental care services.</p>
 				</div>
 			</div>
-			<a href="services.html" class="button">VIEW ALL SERVICES</a>
+			<a href="services.html" class="linkBlock">VIEW ALL SERVICES</a>
 		</div>
 	</div>
 
@@ -272,10 +250,19 @@
 		<div class="team-content">
 			<h1>Our Team</h1>
 			<p>Our friendly and dedicated team is committed to providing excellent care for your pets.</p>
-			<a href="meetStaff.html" class="button">MEET THE TEAM</a>
+			<a href="meetStaff.html" class="linkBlock">MEET THE TEAM</a>
 		</div>
 	</div>
 
-
+<div id="footer">
+	<div id="footer_print">
+		<img id="footer_dog" src="./images/footer_dog.png">
+		<ul class="footer_links">
+			<li><a class="my_footer_link"href="contact.html">Contact Us</a></li>
+			<li><a class="my_footer_link"href="resources.html">Resources</a></li>
+			<li><a class="my_footer_link"href="book.html">Booking</a></li>
+		</ul>
+	</div>
+</div>
 </body>
 </html>

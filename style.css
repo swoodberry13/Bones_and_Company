@@ -1,25 +1,22 @@
-/*colors
-link:https://coolors.co/e1eff6-124a54-ffffff-a5d7f9-edae49
-
-dark teal: #0e3b43 orr #124A54 (lighter)
-very light blue: #E1EFF6
-light blue: #A5D7F9 ---> lighter #b1defc
-yellow: #edae49
-outline for yellow: #ba8838
-#ffffff
+/*color palette:
+https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 */
+
 p,h1,h2,h3{
 	font-family: Verdana, Arial, sans-serif;
 	font-weight: normal;
 	color: #0e3b43;
 }
-
+a{font-family: Verdana, Arial, sans-serif;
+	font-weight: normal;}
 body{
 	background-color: #E1EFF6;
 	margin: 0;
+	overflow: auto;
 }
 
-/* Hero Image*/
+
+/* ----------Hero Image----------*/
 .hero-image {
     
     height: 500px;
@@ -46,7 +43,81 @@ body{
   }
 
 
-/*footer CSS*/
+/*--------------------BANNER /MENU STUFF--------------------*/
+.header{
+	position:sticky;
+	top: 0%;
+	right: 0px;
+	width:100%;
+	padding: 0px;
+
+	display: block;
+	z-index:100; /*so it lays on top of everything*/
+}
+#top_banner{
+	width:100%;
+	height: max-content;
+	background-color: #edae49;
+	border-bottom: .3px solid #ba8838;
+}
+#logo{
+	max-height: 62px;
+	position: center;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+
+/*--------MENU CSS--------*/
+#menuIMG{
+	position: absolute;
+	display: inline-block;
+	max-height: 30px;
+	right:1vw;
+	top: 1vw;
+	cursor: pointer;
+}
+.itemMenu a{
+	float:right;
+
+	display: block;
+	padding: 10px 10px;
+
+	background-color: #A5D7F9;
+	text-decoration: none;
+	font-family: Verdana, Arial, sans-serif;
+
+	text-align: center;
+	font-size: 70%;
+	color: #ffffff;
+	border-left: 3px solid #edae49;
+	border-bottom: 3px solid #edae49;
+	box-shadow: 0px 1px #ba8838;/*gives additional dark yellow small border so menu pops*/
+
+}
+.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
+	a{border-bottom-left-radius: 4px;}
+}
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  top: 0;
+  display: none;
+}
+
+/*hover effect*/
+.itemMenu a:hover{
+	color:#A5D7F9;
+	background-color: #ffffff;
+}
+
+/*---------- END OF BANNER/MENU STUFF----------*/
+
+
+
+
+
+/*--------------------FOOTER CSS--------------------*/
 #footer{
 	position: static;
   left: 0;
@@ -73,141 +144,98 @@ body{
 	margin-right: 6vw;
 
 }
-.footer_links{
+/*------FOOTER LINKS------*/
+.footer_links{/*links in footer*/
 	list-style-type: none;
-	position: absolute;
+	position: relative;
 	margin-top: 10vw;
 	padding-left: 20px;
+
 }
 .footer_links li{
 	display: inline-block;
+	cursor: pointer;
+
 	background-color: #b1defc;
+	border: 1px solid #76A9CB;
+
 	border-radius: 3px;
-	padding-top: 1vw;
-	padding-bottom: 1vw;
+	padding-top: .8vw;
+	padding-bottom: .8vw;
 	padding-left: 1.4vw;
 	padding-right: 1.4vw;
+	margin-top: 4vw;
 	margin-left: 4vw;
+
+	transition: opacity 0.3s ease;
 }
 .footer_links li a{
 	text-decoration: none;
-	color: #0e3b43;
+	color:  #ffffff;
 	font-family: Verdana, Arial, sans-serif;
 }
-@media (max-width: 800px) {
+
+/*------HOVER EFFECTS------*/
+.footer_links li:hover{ /*hover effect for footer buttons*/
+	background-color: #ffffff;
+	border: 1px solid #E1EFF6;
+}
+.footer_links li:hover .my_footer_link{
+	color:#A5D7F9;
+}
+
+/*------RESPONSIVE FOOTER STUFF------*/
+@media (max-width: 800px) {/* makes dog go away and centers links in footer*/
 	#footer_dog{
 		display: none;
 	} 
+	.footer_links{
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.footer_links li{
+		margin-top: 10vw;
+		margin-left:4vw;
+		margin-right: 4vw;
+	}
 }
-
-/* end of footer CSS*/
-
+/*----------END OF FOOTER CSS----------*/
 
 
-/*BANNER AND MENU STUFF*/
-.header{
-	position:sticky;
-	top: 0%;
-	right: 0px;
-	width:100%;
-	padding: 0px;
 
-	display: block;
-	z-index:100; /*so it lays on top of everything*/
-}
-#top_banner{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-	height: max-content;
-	background-color: #edae49;
-	border-bottom: .2px solid #ba8838;
-    padding: 10px;
-}
-#menuIMG{
-    display: none;
-}
-
-#horizontal-menu {
-    list-style-type: none;
-    display: inline-flex;
-    padding: 0;
-    margin: 0;
-}
-
-ul#horizontal-menu > li {
-    display: inline-block;
-    padding: 0px 10px;
-}
-
-ul#horizontal-menu > li > a:hover {
-    color: #0e3b43;
-}
-
-@media (max-width: 860px) {
-    #menuIMG {
-	    display: inline-block;
-	    max-height: 30px;
-	    cursor: pointer;
-
-    }
-    #horizontal-menu {
-        display: none;
-    }
-}
-
-#logo{
-	max-height: 62px;
-	position: center;
-	padding-left: 10px;
-	padding-top: 4px;
-}
-
-.itemMenu a{
-	/* float:right; */
-
-	display: block;
-	padding: 10px 10px;
-
-	/* background-color: #A5D7F9; */
+/*----------GENERIC LINK STYLING----------*/
+.linkBlock{
+	display: inline-block;
+	padding: 10px 20px;
 	text-decoration: none;
-	font-family: Verdana, Arial, sans-serif;
-
-	text-align: center;
-	font-size: 90%;
 	color: #ffffff;
-	border-left: 3px solid #edae49;
-	border-bottom: 3px solid #edae49;
-	/* box-shadow: -2px 1px 6px #227e8f; */
+	background-color: #124A54;
+	border: 2px solid #0E3B43;
 
+	border-radius: 5px;
+	transition: all 0.3s ease;
 }
-.itemMenu a:hover {
-    color: #0e3b43;
+.linkBlock:hover{
+	background-color: #edae49;
+	border: 2px solid #BA8838
 }
-.itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{border-bottom-left-radius: 4px;}
+.linkBlock:after {
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
-#menu {
-  background-color: #A5D7F9;
-  box-shadow: -2px 1px 6px #227e8f;
-  list-style-type: none;
-  margin: 0;
-  padding:0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 0;
-  top: 90px;
-  visibility: collapse;  
-}
-
-
-/* END OF BANNER AND MENU STUFF*/
+.linkBlock:hover:after {
+	opacity: 1;
+		}
+/*----------END OF GENERIC LINK STYLING----------*/
 
 
 
+
+
+/*BASIC TEXT BLOCK*/
+/*this is just css for the generic text block that we use on a lot of our pages*/
 .textblock1{
 	background-color:#A5D7F9;
 	margin-left: 4vw;
