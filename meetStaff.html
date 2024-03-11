@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Meet Our Staff</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
     <style>
@@ -63,6 +64,17 @@
 
         h2 {
             padding-top: 4vh;
+        }
+
+        #filter {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        select {
+            width: max-content;
+            padding: 10px;
         }
 
         @media (max-width: 1300px) {
@@ -161,39 +173,39 @@
             </div>
         </div>
         <h2>Staff</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>Preston Paws</h3>
-                <p>Front Office</p>
-            </div>
-            <div class="grid-item">
-                <h3>Nathan Salamander</h3>
-                <p>Front Office</p>
-            </div>
-            <div class="grid-item">
-                <h3>Maria Golden</h3>
-                <p>Front Office</p>
-            </div>
-            <div class="grid-item">
-                <h3>Rick Rabbett</h3>
-                <p>Janitorial Staff</p>
-            </div>
-            <div class="grid-item">
-                <h3>Lenny Hamm Sturr</h3>
-                <p>Janitorial Staff</p>
-            </div>
-            <div class="grid-item">
-                <h3>Phi Lyne</h3>
-                <p>Janitorial Staff</p>
-            </div>
-            <div class="grid-item">
-                <h3>Connor Fir</h3>
-                <p>Veterinary Assistant</p>
-            </div>
-            <div class="grid-item">
-                <h3>Lily Plaid</h3>
-                <p>Veterinary Assistant</p>
-            </div>
+        <div id="filter">
+            <select id="dropdown">
+                <script>
+                    staff = ["Preston Paws", "Nathan Salamander", "Maria Golden", "Rick Rabbett", "Lenny Hamm Sturr", "Phi Lyne", "Connor Fir", "Lily Plaid"];
+                    positions = ["Front Office", "Front Office", "Front Office", "Janitorial Staff", "Janitorial Staff", "Janitorial Staff", "Veterinary Assistant", "Veterinary Assistant"];
+                    positionsSet = new Set(positions);
+                    optionString = `<option>All staff</option>`;
+                    positionsSet.forEach(function(position) {
+                        optionString += `<option>${position}</option>`;
+                    })
+                    $("#dropdown").html(optionString);
+                    resultString = ``;
+                    positions.forEach(function(position, index) {   
+                        resultString += `<div class='grid-item'><h3>${staff[index]}</h3><p>${positions[index]}</p></div>`
+                    })
+                    $(document).ready(function() {
+                        $("#staff").html(resultString);
+                        $("button").on("click", (function() {
+                            selectedPosition = $("select option:selected").text();
+                            resultString = ``;
+                            positions.forEach(function(position, index) {
+                                if ((positions[index] == selectedPosition) || (selectedPosition == "All staff")) {
+                                    resultString += `<div class='grid-item'><h3>${staff[index]}</h3><p>${positions[index]}</p></div>`
+                                }
+                            })
+                            $("#staff").html(resultString);
+                        }))
+                    })
+                </script>
+            </select>
+            <button class="linkBlock">Filter by position</button>
+        </div>
+        <div class="grid" id="staff">
         </div>
     </div>
 <div id="footer">
