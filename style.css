@@ -296,6 +296,7 @@ window smaller again, the dropdown should also not be visible */
 	transition: all 0.3s ease;
 }
 .linkBlock:hover{
+	cursor: pointer;
 	background-color: #edae49;
 	border: 2px solid #BA8838
 }
@@ -339,7 +340,7 @@ window smaller again, the dropdown should also not be visible */
 		 h2,h1{
 		 	position: relative;
 		 	text-align: center;
-		 	color: #ffffff;
+		 	color: #0E3B43;
 		 	padding: 1.5vw;
 
 
@@ -351,27 +352,15 @@ window smaller again, the dropdown should also not be visible */
 		 	margin-right: .75vw;
 		 	margin-bottom: .5vw;
 
-		 	border-radius: 2vw;
-
 		 	position: relative;
-		 	background-color: #edae49;
+/*		 	background-color: #edae49;*/
 		 	max-width: max-content;
 		 	text-align: center;
 		 }
 }
 .title1{
 	text-align: center;
-	color: #ffffff;
-}
-.title1 span{ /* this is for the background of title1 */
-	margin-top: .5vw;
-	margin-left: .75vw;
-	margin-right: .75vw;
-	margin-bottom: .5vw;
-	background-color: #124A54;
-	padding:  1.5vw;
-	border-radius: 1vw;
-	
+	color: #0E3B43;
 }
 
 .imgBlock{
