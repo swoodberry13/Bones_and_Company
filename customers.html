@@ -119,6 +119,42 @@
 		  margin-left: 20px; 
 		  margin-right: 20px; 
 		}
+
+		/*Styling for review button/reviews*/
+		#reviewButton{ /*button that shows customer reviews*/
+			padding: 10px 10px;
+			text-align: center;
+			margin: auto;
+			display: block;
+
+		}
+		#reviewBox{
+			margin-left: 10px;
+			margin-right:10px;
+			display:none;
+			border: 2px solid #124A54;
+
+			border-radius: 8px;
+			background-color: #B1DEFC;
+			margin-left: 3.2vw;
+			margin-right: 3.2vw;
+			max-height: 340px;
+			overflow: scroll;
+
+		}
+		.review{
+			font-family: Verdana, Arial, sans-serif;
+			display:none;
+			color:#0E3B43;
+			font-size: smaller;
+			margin: 2vw;
+			padding: 1vw;
+			left: 100px;
+			border-radius: 10px;
+			background-color: #ffffff;
+
+
+		}
 	</style>
 </head>
 <body>
@@ -126,18 +162,33 @@
 		<div id="top_banner">
 			<script type="text/javascript">
 				function showMenu() {/*script for top navbar*/
-					var x= document.getElementById('menu');
-					if (x.style.display === "block") {x.style.display = "none";}
-					else {x.style.display = "block";}
+					var menu = document.getElementById('menu');
+                    if (menu.style.visibility == "visible") {menu.style.visibility = "collapse";}
+                    else {menu.style.visibility = "visible";}
 				}
 			</script>
 
-
 			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
-			<div class="topNav">
-				<img id="menuIMG" src="./images/menuIcon.png" onclick="showMenu()">
-			</div>	
+
+            <div><!-- horizontal menu (for screens>900px) -->
+                <ul id="horizontal-menu">
+                	<li class="itemMenu"><a href="home.html">Home</a></li>
+                    <li class="itemMenu"><a href="book.html">Book</a></li>
+                    <li class="itemMenu"><a href="services.html">Services</a></li>
+                    <li class="itemMenu"><a href="resources.html">Resources</a></li>
+                    <li class="itemMenu"><a href="contact.html">Contact Us</a></li>
+                    <li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
+                    <li class="itemMenu"><a href="customers.html">Customers</a></li>
+                </ul>
+
+                <!-- hamburger icon -->
+                <img id="menuIMG" src="./images/menuIcon.png" onclick=showMenu()>
+                	
+            </div>
 		</div>
+
+        <!-- hamburger dropdown menu -->
+        <!-- vertical menu(for screens<900px)-->
 		<ul id="menu">
 			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
@@ -157,113 +208,121 @@
 	
 
 <div class="textblock1">
-<h1 class="block1Title" style="margin: 10px; font-style: italic;">At Bones and Company, we love your pets!</h1>
-<p>Finding a compassionate and caring pet vet who takes your pet’s health personally can be hard to do.</p> 
-<p>At Bones and Company, our staff is dedicated to providing exceptionally kind and loving medical care.</p> 
-<p>Now accepting new clients!  Call 123.456.7890</p> 
-<p>“We strive to exceed our clients' expectations by treating owners and their pets with respect, honesty, and compassion - and 
-	treating all animals as if they were our own.” - Dr. Suzy Bones, practice owner and pet vet</p> 
-<p>To see how much the staff at B&C loves caring for your pet, just take a look at our “Happy Customers"!</p> 
-<p>Is your pet at B&C? Share a photo with us to be included in the slideshow!</p> 
-<br>
+	<h1 class="block1Title" style="margin: 10px; font-style: italic;">At Bones and Company, we love your pets!</h1>
+	<p>Finding a compassionate and caring pet vet who takes your pet’s health personally can be hard to do.</p> 
+	<p>At Bones and Company, our staff is dedicated to providing exceptionally kind and loving medical care.</p> 
+	<p>Now accepting new clients!  Call 123.456.7890</p> 
+	<p>“We strive to exceed our clients' expectations by treating owners and their pets with respect, honesty, and compassion - and 
+		treating all animals as if they were our own.” - Dr. Brian Bones, practice owner and pet vet</p> 
+	<p>To see how much the staff at B&C loves caring for your pet, just take a look at our “Happy Customers"!</p> 
+	<p>Is your pet at B&C? Share a photo with us to be included in the slideshow!</p> 
+	<br>
 
-	<h2 class="title1"><span>Our Happy Customers</span></h2>
+		<h2 class="title1"><span>Our Happy Customers</span></h2>
 
-	<div class="slideshow-container" style="text-align: center">
+		<div class="slideshow-container" style="text-align: center">
 
-		<div class="mySlides fade">
-		  <img src="./images/mabel.jpg" class="slideshowIMG">
-		  <div class="imgtext"><span>Mabel</span></div>
-		</div>
-		
-		<div class="mySlides fade">
-		  <img src="./images/domino.jpeg" class="slideshowIMG">
-		  <div class="imgtext"><span>Domino</span></div>
-		</div>
-		
-		<div class="mySlides fade">
-		  <img src="./images/stella.jpg" class="slideshowIMG">
-		  <div class="imgtext"><span>Stella</span></div>
-		</div>
+			<div class="mySlides fade">
+			  <img src="./images/slide_show/mabel.jpg" class="slideshowIMG">
+			  <div class="imgtext"><span>Mabel</span></div>
+			</div>
+			<div class="mySlides fade">
+			  <img src="./images/slide_show/domino.jpeg" class="slideshowIMG">
+			  <div class="imgtext"><span>Domino</span></div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="./images/slide_show/stella.jpg" class="slideshowIMG">
+			  <div class="imgtext"><span>Stella</span></div>
+			</div>
 
-		<!-- <div class="mySlides fade">
-			<div class="numbertext">4 / 4</div>
-			<img src="./images/charlie.jpeg" class="slideshowIMG"">
-			<div class="imgtext">Charlie</div>
-		  </div> -->
-		
-		<a class="prev" onclick="plusSlides(-1)">❮</a>
-		<a class="next" onclick="plusSlides(1)">❯</a>
-		
+			
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+			
 		</div>
 
-		<div style="text-align:center">			
-			<span class="dot" onclick="currentSlide(1)"></span> 
-			<span class="dot" onclick="currentSlide(2)"></span> 
-			<span class="dot" onclick="currentSlide(3)"></span> 
-			<div id="numText"></div>
-		
-		</div>
+			<div style="text-align:center">			
+				<span class="dot" id="pic1" onclick="currentSlide(1)"></span> 
+				<span class="dot" id="pic2" onclick="currentSlide(2)"></span> 
+				<span class="dot" id="pic3" onclick="currentSlide(3)"></span>
+	<!-- 			<span class="dot" id="pic4" onclick="currentSlide(4)"></span> 
+				<span class="dot" id="pic5" onclick="currentSlide(5)"></span> -->
+				<div id="numText"></div>
+			
+			</div>
 
-		
-		<script>
-		let slideIndex = 1;
-		showSlides(slideIndex);
-		
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-		
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-		
-		function showSlides(n) {
-		  let i;
-		  let slides = document.getElementsByClassName("mySlides");
-		  let dots = document.getElementsByClassName("dot");
-		  if (n > slides.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		  }
-		  for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+				
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+				
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
 
-		  // changes the slide index counter
-		  var curSlideNum= slideIndex+"/"+slides.length;
-		  document.getElementById("numText").innerHTML=curSlideNum;
-		  
-		}
-		</script>
-	</div>
+				  // changes the slide index counter
+				  var curSlideNum= slideIndex+"/"+slides.length;
+				  document.getElementById("numText").innerHTML=curSlideNum;
+				  
+				}
+			</script>
+</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		  $("button").click(function(){
-			$("#div1").fadeIn("slow");
-			$("#div2").fadeIn("slow");
-			$("#div3").fadeIn("slow");
+		  $("#reviewButton").click(function(){
+		  	let isShown=$(".review").is(":visible");
+		  	if(!isShown){
+		  		$("#reviewBox").fadeIn("slow");
+		  		$(".review").fadeIn("slow");
+		  		$("#reviewButton").text("Click to hide reviews");
+		  	}
+		  	else{
+		  		$("#reviewBox").fadeOut("fast");
+		  		$(".review").fadeOut("fast");
+		  		$("#reviewButton").text("Click to see real customer reviews!");
+		  	}
 		  });
 		});
-		</script>
-	<button class="linkBlock">Click to see real customer reviews!</button><br><br>
-<div id="div1" style="width:700px;height:100px;display:none;background-color:#A5D7F9">My pet was in pain for almost 2 months and after getting wrong information from another 
-	vet we decided to come to Bones and Company, they figured out the problem and solved it in about 25 minutes. 
-	My pet and I were both relieved and I'm so grateful for the wonderful nurses and doctors here. 
-	I came in with the expectation of paying a lot of money but was pleasantly surprised as their costs are pretty reasonable. 
-	I look forward to making this my permanent vet.</div><br>
-<div id="div2" style="width:700px;height:100px;display:none;background-color:#A5D7F9">Level of care my pets have received at B&C is unprecedented. 
-	Great veterinary clinic. Only vet I'll ever bring my animals to. 
-	I'm probably gonna butcher her name but Dr. Maragolus is amazing. 
-	If you need a vet I'd strongly recommend this clinic</div><br>
-<div id="div3" style="width:700px;height:100px;display:none;background-color:#A5D7F9">I have been going there for years and have always had professional, friendly service and advice. 
-	The care is excellent and I don't hesitate to recommend them.</div>
-	<br>
+	</script>
+
+<button id="reviewButton" class="linkBlock">Click to see real customer reviews!</button><br>
+
+<div id="reviewBox">
+	<div class="review" >"My pet was in pain for almost 2 months and after getting wrong information from another vet we decided to come to Bones and Company, they figured out the problem and solved it in about 25 minutes. My pet and I were both relieved and I'm so grateful for the wonderful nurses and doctors here. I came in with the expectation of paying a lot of money but was pleasantly surprised as their costs are pretty reasonable. I look forward to making this my permanent vet."</div>
+	<div class="review">"Level of care my pets have received at B&C is unprecedented. Great veterinary clinic. Only vet I'll ever bring my animals to. I'm probably gonna butcher her name but Dr. Kidden is amazing. If you need a vet I'd strongly recommend this clinic."</div>
+	<div class="review">"I have been going there for years and have always had professional, friendly service and advice. The care is excellent and I don't hesitate to recommend them."</div>
+	<div class="review">"Absolutely fantastic service from Bones and CO. They were incredibly attentive to my pet's needs and provided top-notch care. The staff was friendly and knowledgeable, making the entire experience stress-free. I highly recommend them to anyone looking for compassionate veterinary care."</div>
+	<div class="review">"Bones and Company sets the gold standard for veterinary care! Dr. Bones and Dr. Kidden provided impeccable service, addressing all my parrot's needs with precision and care. The clinic's atmosphere was welcoming, and the staff ensured a smooth and stress-free experience. I wholeheartedly recommend Bones and Company for top-notch care!"</div>
+	<div class="review">Bones and Company is a gem in the veterinary world! The clinic's modern facilities and attentive service made me feel confident in their abilities. I highly recommend Bones and Company for anyone looking for compassionate and skilled veterinary care."</div>
+	<div class="review">"Lily Plaid made sure my Mr Mittens felt comfortable and loved throughout the visit. I wouldn't trust anyone else with my furry friend's health. Thank you, Bones and Company, for your dedication and compassion!"</div>
+	<div class="review"> "The entire staff goes above and beyond to ensure a positive experience. Bones and Company is definitely the place to go for all your pet's needs"</div>
+	<div class="review">"The level of care and compassion here is unmatched. Thank you, Bones and Company!"</div>
+	<div class="review">"Choosing Bones and Company was the best decision I made for my dog's health! Dr. Bones and Dr. Kidden provided exceptional care, and their expertise was evident from start to finish. The clinic's friendly atmosphere and efficient service made the entire experience stress-free. I wholeheartedly recommend Bones and Company to all pet owners."</div>
+</div>
+
+
+
 	<div id="footer">
 		<div id="footer_print">
 			<img id="footer_dog" src="./images/footer_dog.png">
