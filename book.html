@@ -231,13 +231,9 @@
 
 		<div class="selection">
             <label for="doctorSelector">Filter by Doctor:</label>
-			<select id="doctorSelector" class="doctor-selector"></select>
-            <!-- <select id="doctorSelector" class="doctor-selector">
-                <option value="all">All Doctors</option>
-                <option value="Dr. Smith">Dr. Smith</option>
-                <option value="DrJohnson">Dr. Johnson</option>
-                <option value="Dr. Davis">Dr. Davis</option>
-            </select> -->
+			<select id="doctorSelector" class="doctor-selector">
+				<option value="all">All Doctors</option>
+			</select>
         
 			<div class="availability">
 				<h2>Available Times:</h2>
@@ -282,9 +278,16 @@ const renderCalendar = () => {
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
 
-    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-        // adding active class to li if the current day, month, and year matched
+    for (let i = 1; i <= lastDateofMonth; i++) {
+        // Adding active class to li if the current day, month, and year match the current date
         let isToday = "";
+        if (
+            i === new Date().getDate() &&
+            currMonth === new Date().getMonth() &&
+            currYear === new Date().getFullYear()
+        ) {
+            isToday = "active";
+        }
         liTag += `<li class="${isToday}">${i}</li>`;
     }
 
@@ -400,6 +403,7 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 		document.addEventListener('DOMContentLoaded', function () {
 
+
 			// add the doctors
 			const doctor_options = document.getElementById('doctorSelector');
 			for (const day in schedule) {
@@ -470,16 +474,30 @@ dayElements.forEach(dayElement => {
 				console.log("doctor");
 				console.log(selectedDoctor);
 
-                // Implement logic to filter available times based on the selected date and doctor
-                const availableTimes = getAvailableTimes(selectedDate, selectedDoctor, false, true);
 
+				// Implement logic to filter available times based on the selected date and doctor
+				console.log("window screen size");
+				console.log(window.screen.width);
+				var available_t;
+
+				if (window.screen.width > 700) {
+					console.log("BIG SCREEN");
+					available_t = getAvailableTimes(selectedDate, selectedDoctor, true, true);
+				}
+				else {
+					console.log("SMALL SCREEN");
+					available_t = getAvailableTimes(selectedDate, selectedDoctor, false, true);
+				}
+
+				console.log("available times");
+				console.log(available_t);
                 // Display the available times
-                displayAvailableTimes(availableTimes, selectedDoctor);
+                displayAvailableTimes(available_t, selectedDoctor);
             }
 
             function getAvailableTimes(date, doctor, big_calendar, from_update) {
 				var weekday = [];
-				if (big_calendar || from_update) {
+				if (big_calendar) {
 					console.log("adjusted cal");
 					weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 				}
@@ -559,6 +577,11 @@ dayElements.forEach(dayElement => {
                 const selectedTime = event.target.textContent;
                 // You can add further actions or navigate to another page here
             }
+
+			// Automatically display available times for today's date
+			selectedDate = new Date();
+			times_select = getAvailableTimes(selectedDate, 'all', true, false);
+			displayAvailableTimes(times_select, 'all');
         });
 
 	</script>
