@@ -15,13 +15,31 @@
         	display: flex;
         	flex-wrap: wrap;
         	margin: 8px;
-        	gap: 12px;
-        	background-color: #ffffff;
+        	gap: 6px;
         	border-radius: 14px;
+
         }
         .flexItem{
-        	flex: 33%;
+        	flex: 20%;
         	margin: 4px;
+        	background-color: #ffffff;
+        	border: 1px solid #E1EFF6;
+        	border-radius: 3px;
+        	align-items: baseline;
+        	padding: 4px 14px;
+        }
+        .flexItem h3 a{
+        	text-decoration: none;
+        	color: #0E3B43;
+        }
+        .flexItem h3 a:hover {
+        	color: #BA8838;
+        }
+
+        @media (max-width: 860px) {
+        	.flexItem{
+        		flex: 100%;
+        	}
         }
     </style>
 </head>
@@ -38,7 +56,7 @@
 
 			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
 
-            <div><!-- horizontal menu (for screens>900px) -->
+            <div><!-- horizontal menu (for screens>920px) -->
                 <ul id="horizontal-menu">
                 	<li class="itemMenu"><a href="home.html">Home</a></li>
                     <li class="itemMenu"><a href="book.html">Book</a></li>
@@ -56,7 +74,7 @@
 		</div>
 
         <!-- hamburger dropdown menu -->
-        <!-- vertical menu(for screens<900px)-->
+        <!-- vertical menu(for screens<920px)-->
 		<ul id="menu">
 			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
@@ -79,18 +97,42 @@
 	<p>If your pet needs emergency care outside of our office hours please reach out to one of the following services</p>
 	<div class="flexBox">
 		<div class="flexItem">
-			<h3>Tufts Vets</h3>
-			<a href="https://tuftsvets.org/">Website</a>
+			<h3><a href="https://tuftsvets.org/">Tufts Veterinary Emergency Treatment</a></h3>
 			<p>Address: 525 South Street, Walpole, MA 02081</p>
-			<p>508-668-5454</p>
+			<p>(508) 668-5454</p>
 		</div>
 		<div class="flexItem">
+			<h3><a href="https://www.neamc.com/">New England Animal Medical Center</a></h3>
+			<p>Address: 595 West Center Street, West Bridgewater, MA 02379</p>
+			<p>(508) 580-2515</p>
+		</div>
+		<div class="flexItem">
+			<h3><a href="https://www.mspca.org/medical-centers/angell-animal-medical-center-boston/">Angell Animal Medical Center - Boston</a></h3>
+			<p>Address: 350 S. Huntington Avenue, Boston, MA 02130</p>
+			<p>(617) 522-7282</p>
 		</div>
 	</div>
-
-
 </div>
-
+<div class="textblock1">
+	<div class="block1Title"><h2>Adoption</h2></div>
+		<div class="flexBox">
+		<div class="flexItem">
+			<h3><a href="https://www.arlboston.org/">Animal Rescue League of Boston</a></h3>
+			<p>Address: 10 Chandler Street, Boston, MA 02116</p>
+			<p>(617) 226-5605</p>
+		</div>
+		<div class="flexItem">
+			<h3><a href="https://www.sweetpawsrescue.org/">Sweet Paws Rescue</a></h3>
+			<p>Address: 310 Main Street Groveland, MA 01834</p>
+			<p>(617) 699-5320</p>
+		</div>
+		<div class="flexItem">
+			<h3><a href="https://aplaceforace.org/">A Place for Ace</a></h3>
+			<p>Address: 350 Holton St, Woburn, MA 01801</p>
+			<p>(781) 690-5610</p>
+		</div>
+	</div>
+</div>
 
 <div id="footer">
 	<div id="footer_print">
