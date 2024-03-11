@@ -2,17 +2,26 @@
 https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 */
 
-p,h1,h2,h3{
-	font-family: Verdana, Arial, sans-serif;
+p {
+    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-weight: normal;
+	color: #0e3b43;
+}
+
+h1,h2,h3{
+	font-family: 'Lexend', Verdana, Arial, sans-serif;
 	font-weight: normal;
 	color: #0e3b43;
 }
-a{font-family: Verdana, Arial, sans-serif;
-	font-weight: normal;}
+a{
+    font-family: 'Inter', Verdana, Arial, sans-serif;
+	font-weight: normal;
+}
 body{
 	background-color: #E1EFF6;
 	margin: 0;
 	overflow: auto;
+    font-family: 'Inter', Verdana, Arial, sans-serif;
 }
 
 
