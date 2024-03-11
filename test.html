@@ -1,67 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	<style type="text/css">
-		/* Hero Image*/
-		.hero-image {
-		    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("mabelboat.JPG");
-		    height: 500px;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-		    position: relative;
-		    margin:0; 
-		  }
-		  
-		  .hero-text {
-		    text-align: center;
-		    position: absolute;
-		    top: 50%;
-		    left: 50%;
-		    transform: translate(-50%, -50%);
-		    h1{color: #ffffff;}
-		  }
-		  .contactFlex{
-			  	display: flex;
-			  	flex-wrap: wrap;
-			  	contact_item1{
-			  		flex: 33%;
-			  	}
-			  	contact_item2{
-			  		flex: 33%;
-			  	}
-			  	contact_item3{
-			  		flex: 33%;
-			  	}
-		  }
-
-
-	</style>
-</head>
-<body>
-	<div class= "header">
 		<div id="top_banner">
 			<script type="text/javascript">
 				function showMenu() {/*script for top navbar*/
-					var x= document.getElementById('menu');
-					if (x.style.display === "block") {x.style.display = "none";}
-					else {x.style.display = "block";}
+					var menu = document.getElementById('menu');
+
+                    if (menu.style.visibility == "visible") {menu.style.visibility = "collapse";}
+                    else {menu.style.visibility = "visible";}
 				}
 			</script>
 
-
 			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
-			<div class="topNav">
-				<img id="menuIMG" src="./images/menuIcon.png" onclick="showMenu()">
-			</div>	
-		</div>
-		<ul id="menu">
 
+            <div>
+                <ul id="horizontal-menu">
+                    <li class="itemMenu"><a href="book.html">Book</a></li>
+                    <li class="itemMenu"><a href="services.html">Services</a></li>
+                    <li class="itemMenu"><a href="resources.html">Resources</a></li>
+                    <li class="itemMenu"><a href="contact.html">Contact Us</a></li>
+                    <li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
+                    <li class="itemMenu"><a href="customers.html">Customers</a></li>
+                </ul>
+
+                <!-- hamburger icon -->
+                <img id="menuIMG" src="./images/menuIcon.png" onclick=showMenu()>
+                	
+            </div>
+		</div>
+        <!-- hamburger dropdown menu -->
+		<ul id="menu">
+			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
 			<li class="itemMenu"><a href="services.html">Services</a></li>
 			<li class="itemMenu"><a href="resources.html">Resources</a></li>
@@ -69,40 +35,3 @@
 			<li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
 			<li class="itemMenu"><a href="customers.html">Customers</a></li>
 		</ul>
-	</div>	
-
-
-
-	<div class="hero-image">
-		<div class="hero-text">
-		  <h1 style="font-size:50px; font-style: italic;">Contact Us</h1>
-		</div>
-	  </div>
-
-<div class="textblock1">
-<div class="block1Title"><h1>We'd love to here from you!</h1></div>
-
-<p>At B&C, our mission is to help pets live longer, happier, and 
-   healthier lives through compassionate care and client education. Contact us today!</p>
-<div class="contactFlex">
-	<div class="contact_item1">
-		<h3>LOCATION</h3>
-		<p>419 Boston Ave</p>
-		<p>Medford, MA, 02155</p>
-	</div>
-	<div class="contact_item2">
-		<h3>CONTACT INFORMATION</h3>
-		<p>Phone: 123-456-7890</p>
-		<p>Email: info@bonesandcompany.net</p>
-	</div>
-	<div class="contact_item3">
-		<h3>HOURS</h3>
-		<p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-		<p>Weekends: Closed</p>
-	</div>
-</div>
-<h2 style="font-style: italic;">Nurturing the human-animal bond through exceptional and compassionate care.</h2>
-<p>Schedule your appointment today! We look forward to meeting you.</p>
-</div>
-</body>
-</html>

@@ -163,10 +163,6 @@
 			<script type="text/javascript">
 				function showMenu() {/*script for top navbar*/
 					var menu = document.getElementById('menu');
-					// if (x.style.display === "block") {x.style.display = "none";}
-					// else {x.style.display = "block";}
-					// menu.addEventListener("disappear",hideSidebar);
-
                     if (menu.style.visibility == "visible") {menu.style.visibility = "collapse";}
                     else {menu.style.visibility = "visible";}
 				}
@@ -174,7 +170,7 @@
 
 			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
 
-            <div>
+            <div><!-- horizontal menu (for screens>900px) -->
                 <ul id="horizontal-menu">
                     <li class="itemMenu"><a href="book.html">Book</a></li>
                     <li class="itemMenu"><a href="services.html">Services</a></li>
@@ -189,7 +185,9 @@
                 	
             </div>
 		</div>
+
         <!-- hamburger dropdown menu -->
+        <!-- vertical menu(for screens<900px)-->
 		<ul id="menu">
 			<li class="itemMenu"><a href="home.html">Home</a></li>
 			<li class="itemMenu"><a href="book.html">Book</a></li>
