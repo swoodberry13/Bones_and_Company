@@ -1,0 +1,77 @@
+{
+    "Monday": [
+        {
+            "name": "Dr. Smith",
+            "time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+        },
+        {
+            "name": "DrJohnson",
+            "time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+        }
+    ],
+
+    "Tuesday": [
+        {
+            "name": "Dr. Smith",
+            "time": ["11:00 AM", "1:30 PM", "5:00 PM"]
+        },
+        {
+            "name": "Dr. Davis",
+            "time": ["10:30 AM", "2:30 PM", "4:00 PM"]
+        }
+    ],
+
+    "Wednesday": [
+        {
+            "name": "DrJohnson",
+            "time": ["9:30 AM", "12:00 PM", "3:30 PM"]
+        },
+        {
+            "name": "Dr. Davis",
+            "time": ["8:00 AM", "1:00 PM", "5:30 PM"]
+        }
+    ],
+
+    "Thursday": [
+        {
+            "name": "Dr. Smith",
+            "time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+        },
+        {
+            "name": "DrJohnson",
+            "time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+        }
+    ],
+
+    "Friday": [
+        {
+            "name": "Dr. Davis",
+            "time": ["11:00 AM", "1:30 PM", "5:00 PM"]
+        },
+        {
+            "name": "Dr. Smith",
+            "time": ["10:30 AM", "2:30 PM", "4:00 PM"]
+        }
+    ],
+
+    "Saturday": [
+        {
+            "name": "DrJohnson",
+            "time": ["9:30 AM", "12:00 PM", "3:30 PM"]
+        },
+        {
+            "name": "Dr. Davis",
+            "time": ["8:00 AM", "1:00 PM", "5:30 PM"]
+        }
+    ],
+    "Sunday": [
+        {
+            "name": "Dr. Smith",
+            "time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+        },
+        {
+            "name": "Dr. Davis",
+            "time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+        }
+    ]
+}

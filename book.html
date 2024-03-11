@@ -1,53 +1,567 @@
-class="my_footer_link"<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Booking</title>
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-
+	<!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 	<link rel="stylesheet" href="style.css">
+
+	<style>
+		*{
+			font-family: 'Poppins', sans-serif;
+		}
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .booking-container {
+            width: 95%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+		.wrapper {
+            width: 60%; /* Adjusted width */
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			margin-right: 3%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px 10px;
+            justify-content: space-between;
+        }
+
+        header .icons {
+            display: flex;
+        }
+
+        header .icons span {
+            height: 38px;
+            width: 38px;
+            margin: 0 1px;
+            cursor: pointer;
+            color: #878787;
+            text-align: center;
+            line-height: 38px;
+            font-size: 1.9rem;
+            user-select: none;
+            border-radius: 50%;
+        }
+
+        .icons span:last-child {
+            margin-right: -10px;
+        }
+
+        header .icons span:hover {
+            background: #f2f2f2;
+        }
+
+        header .current-date {
+            font-size: 1.45rem;
+            font-weight: 500;
+        }
+
+        .calendar {
+            padding: 20px;
+        }
+
+		.calendar ul {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			text-align: center;
+			margin: 0;  /* Add this line to remove margin */
+			padding: 0; /* Add this line to remove padding */
+		}
+
+
+        .calendar .days {
+            margin-bottom: 20px;
+        }
+
+        .calendar li {
+            color: #333;
+            width: calc(100% / 7);
+            font-size: 1.07rem;
+        }
+
+        .calendar .weeks li {
+            font-weight: 500;
+            cursor: default;
+        }
+
+        .calendar .days li {
+            z-index: 1;
+            cursor: pointer;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .days li.inactive {
+            color: #aaa;
+        }
+
+        .days li.active {
+            color: #fff;
+        }
+
+        .days li::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            height: 40px;
+            width: 40px;
+            z-index: -1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .days li.active::before {
+            background: #9B59B6;
+        }
+
+        .days li:not(.active):hover::before {
+            background: #f2f2f2;
+        }
+
+        .date-selector,
+        .doctor-selector {
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* style for the available time buttons */
+        .available-time-btn {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .selection {
+            width: 100%;
+        }
+
+        .small-calendar {
+			display: none;
+            width: 100%;
+            margin-bottom: 20px; /* Added margin-bottom */
+        }
+
+        @media only screen and (max-width: 700px) {
+            /* Adjust the max-width value based on your design needs */
+
+            .wrapper {
+                display: none; /* Show the wrapper when the screen size is decreased */
+            }
+
+            .small-calendar {
+                display: block; /* Hide the small-calendar when the screen size is decreased */
+            }
+        }
+
+		.no-availability {
+			font-weight: bold;
+			color: #FF0000; /* Adjust the color as needed */
+			margin-top: 10px;
+		}
+    </style>
 </head>
+
 <body>
-	<div class= "header">
-		<div id="top_banner">
-			<script type="text/javascript">
-				function showMenu() {/*script for top navbar*/
-					var x= document.getElementById('menu');
-					if (x.style.display === "block") {x.style.display = "none";}
-					else {x.style.display = "block";}
-				}
-			</script>
-
-
-			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
-			<div class="topNav">
-				<img id="menuIMG" src="./images/menuIcon.png" onclick="showMenu()">
-			</div>	
-		</div>
-		<ul id="menu">
-			<li class="itemMenu"><a href="home.html">Home</a></li>
-			<li class="itemMenu"><a href="book.html">Book</a></li>
-			<li class="itemMenu"><a href="services.html">Services</a></li>
-			<li class="itemMenu"><a href="resources.html">Resources</a></li>
-			<li class="itemMenu"><a href="contact.html">Contact Us</a></li>
-			<li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
-			<li class="itemMenu"><a href="customers.html">Customers</a></li>
-		</ul>
+	<!-- TODO: RE-ADD THE REMOVED CODE SPECIFIED BELOW -->
+	<!-- temporarily removed header and footer code for my own sanity's sake lol  -->
+	<h1 style="text-align: center; margin-top: 20px;">Choose a date, time, and provider</h1>
+	<div class="small-calendar">
+		<label for="dateSelector">Select a Date:</label>
+		<input type="date" id="dateSelector" class="date-selector">
+		<br>
 	</div>
+	
+	<div class="booking-container">
+
+		<!-- NEW CODE -->
+		<div class="wrapper">
+			<header>
+				<p class="current-date"></p>
+				<div class="icons">
+					<span id="prev" class="material-symbols-rounded">chevron_left</span>
+					<span id="next" class="material-symbols-rounded">chevron_right</span>
+				</div>
+			</header>
+			<div class="calendar">
+				<ul class="weeks">
+					<li>Sun</li>
+					<li>Mon</li>
+					<li>Tue</li>
+					<li>Wed</li>
+					<li>Thu</li>
+					<li>Fri</li>
+					<li>Sat</li>
+				</ul>
+				<ul class="days"></ul>
+			</div>
+		</div>
+		<!-- NEW CODE -->
+
+		<div class="selection">
+            <label for="doctorSelector">Filter by Doctor:</label>
+			<select id="doctorSelector" class="doctor-selector"></select>
+            <!-- <select id="doctorSelector" class="doctor-selector">
+                <option value="all">All Doctors</option>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="DrJohnson">Dr. Johnson</option>
+                <option value="Dr. Davis">Dr. Davis</option>
+            </select> -->
+        
+			<div class="availability">
+				<h2>Available Times:</h2>
+            <div id="availableTimes"></div>
+			</div>
+        </div>
 
 
+    </div>
+	
 
 	
-<div id="footer">
-	<div id="footer_print">
-		<img id="footer_dog" src="./images/footer_dog.png">
-		<ul class="footer_links">
-			<li><a class="my_footer_link"href="contact.html">Contact Us</a></li>
-			<li><a class="my_footer_link"href="resources.html">Resources</a></li>
-			<li><a class="my_footer_link"href="book.html">Booking</a></li>
-		</ul>
-	</div>
-</div>
+	
+	
+	<script>
+
+		var selectedDate = "null";
+		var selectedDay = "null";
+
+		// CALENDAR CODE
+		const daysTag = document.querySelector(".days"),
+currentDate = document.querySelector(".current-date"),
+prevNextIcon = document.querySelectorAll(".icons span");
+
+// getting new date, current year and month
+let date = new Date(),
+currYear = date.getFullYear(),
+currMonth = date.getMonth();
+
+// storing full name of all months in array
+const months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+const renderCalendar = () => {
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+    let liTag = "";
+
+    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    }
+
+    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+        // adding active class to li if the current day, month, and year matched
+        let isToday = "";
+        liTag += `<li class="${isToday}">${i}</li>`;
+    }
+
+    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+    }
+    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+    daysTag.innerHTML = liTag;
+}
+renderCalendar();
+
+prevNextIcon.forEach(icon => { // getting prev and next icons
+    icon.addEventListener("click", () => { // adding click event on both icons
+        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+            // creating a new date of current year & month and pass it as date value
+            date = new Date(currYear, currMonth, new Date().getDate());
+            currYear = date.getFullYear(); // updating current year with new date year
+            currMonth = date.getMonth(); // updating current month with new date month
+        } else {
+            date = new Date(); // pass the current date as date value
+        }
+        renderCalendar(); // calling renderCalendar function
+    });
+});
+		// CALENDAR CODE OVER
+
+
+		// totally uncessary made up info of doctor times smh
+		const schedule = {
+			Monday: [
+				{
+					"name": "Dr. Smith",
+					"time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+				},
+				{
+					"name": "Dr. Johnson",
+					"time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+				}
+			],
+
+			Tuesday: [
+				{
+					"name": "Dr. Smith",
+					"time": ["11:00 AM", "1:30 PM", "5:00 PM"]
+				},
+				{
+					"name": "Dr. Davis",
+					"time": ["10:30 AM", "2:30 PM", "4:00 PM"]
+				}
+			],
+
+			Wednesday: [
+				{
+					"name": "Dr. Johnson",
+					"time": ["9:30 AM", "12:00 PM", "3:30 PM"]
+				},
+				{
+					"name": "Dr. Davis",
+					"time": ["8:00 AM", "1:00 PM", "5:30 PM"]
+				}
+			],
+
+			Thursday: [
+				{
+					"name": "Dr. Smith",
+					"time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+				},
+				{
+					"name": "Dr. Johnson",
+					"time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+				}
+			],
+
+			Friday: [
+				{
+					"name": "Dr. Davis",
+					"time": ["11:00 AM", "1:30 PM", "5:00 PM"]
+				},
+				{
+					"name": "Dr. Smith",
+					"time": ["10:30 AM", "2:30 PM", "4:00 PM"]
+				}
+			],
+
+			Saturday: [
+				{
+					"name": "Dr. Johnson",
+					"time": ["9:30 AM", "12:00 PM", "3:30 PM"]
+				},
+				{
+					"name": "Dr. Davis",
+					"time": ["8:00 AM", "1:00 PM", "5:30 PM"]
+				}
+			],
+
+			Sunday: [
+				{
+					"name": "Dr. Smith",
+					"time": ["10:00 AM", "2:00 PM", "4:30 PM"]
+				},
+				{
+					"name": "Dr. Davis",
+					"time": ["9:00 AM", "11:30 AM", "3:00 PM"]
+				}
+			]
+		};
+
+
+	// OLD CODE
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			// add the doctors
+			const doctor_options = document.getElementById('doctorSelector');
+			for (const day in schedule) {
+				schedule[day].forEach(doctor => {
+					if (!doctor_options.querySelector(`option[value="${doctor.name}"]`)) {
+						const option = document.createElement('option');
+						option.value = doctor.name;
+						option.textContent = doctor.name;
+						doctor_options.appendChild(option);
+					}
+				});
+			}
+
+// Add an event listener for the days in the new calendar
+const daysInNewCalendar = document.querySelectorAll('.calendar .days li');
+    daysInNewCalendar.forEach(day => {
+        day.addEventListener('click', handleDateClick);
+    });
+
+    function handleDateClick(event) {
+		console.log("event");
+		console.log(event);
+        selectedDate = new Date(currYear, currMonth, parseInt(event.target.textContent));
+		console.log("selected date 2");
+		console.log(selectedDate);
+        const selectedDoctor = document.getElementById('doctorSelector').value;
+
+        // Update available times when a date is clicked
+        const availableTimes = getAvailableTimes(selectedDate, selectedDoctor, true, false);
+
+        // Display the available times
+        displayAvailableTimes(availableTimes, selectedDoctor);
+    }
+
+// Get all the .days li elements
+const dayElements = document.querySelectorAll('.days li');
+
+// Add click event listener to each li element
+dayElements.forEach(dayElement => {
+    dayElement.addEventListener('click', () => {
+        // Remove 'active' class from all li elements
+        dayElements.forEach(element => element.classList.remove('active'));
+
+        // Add 'active' class to the clicked li element
+        dayElement.classList.add('active');
+    });
+});
+
+
+	// OLD CODE
+            const dateSelector = document.getElementById('dateSelector');
+            const doctorSelector = document.getElementById('doctorSelector');
+            const availableTimesContainer = document.getElementById('availableTimes');
+
+            dateSelector.addEventListener('change', () => updateAvailableTimes(true));
+			doctorSelector.addEventListener('change', () => updateAvailableTimes(false));
+
+            function updateAvailableTimes(changed_time) {
+				console.log("UPDATE UPDATE UPDATE UPDATE UPDATE ");
+				if (changed_time) {
+					selectedDate = dateSelector.value;
+				}
+
+				console.log("selected date 1");
+				console.log(selectedDate);
+
+                const selectedDoctor = doctorSelector.value;
+				console.log("doctor");
+				console.log(selectedDoctor);
+
+                // Implement logic to filter available times based on the selected date and doctor
+                const availableTimes = getAvailableTimes(selectedDate, selectedDoctor, false, true);
+
+                // Display the available times
+                displayAvailableTimes(availableTimes, selectedDoctor);
+            }
+
+            function getAvailableTimes(date, doctor, big_calendar, from_update) {
+				var weekday = [];
+				if (big_calendar || from_update) {
+					console.log("adjusted cal");
+					weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+				}
+				else {
+					console.log("regular cal");
+					weekday = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday", "Sunday"];
+				}
+
+				console.log("schedule");
+				console.log(schedule);
+				
+				selectedDay = weekday[new Date(date).getDay()];
+
+				console.log("selected day");
+				console.log(selectedDay);
+
+				const doctorsSchedule = schedule[selectedDay];
+
+				console.log("doctors schedule");
+				console.log(doctorsSchedule);
+
+                // Filter available times based on the selected doctor
+                let availableTimes = [];
+                if (doctor === 'all') {
+                    // If 'All Doctors' is selected, combine available times from all doctors
+                    for (const doctorName in doctorsSchedule) {
+                        availableTimes = availableTimes.concat(doctorsSchedule[doctorName].time);
+                    }
+                } else {
+                    // If a specific doctor is selected, get their available times
+                    // availableTimes = doctorsSchedule[doctor].time;
+					doctorsSchedule.forEach(doctors => {
+						if (doctors.name == doctor) {
+							availableTimes = availableTimes.concat(doctors.time);
+						}
+					});
+                }
+
+                return availableTimes || []; // Return an empty array if no available times are found
+            }
+
+            function displayAvailableTimes(times, doctor) {
+				console.log("doctor name");
+				console.log(doctor);
+
+                // Clear the previous buttons
+                availableTimesContainer.innerHTML = '';
+
+				// Check if there are no available times
+				if (times.length === 0) {
+					const noAvailabilityMessage = document.createElement('p');
+					noAvailabilityMessage.className = 'no-availability';
+					noAvailabilityMessage.textContent = "No Appointments Available.\nLooks like " + doctor + " doesn't have any availability on this day.";
+					availableTimesContainer.appendChild(noAvailabilityMessage);
+					return;
+				}
+
+                // Sort the times with a custom sorting function
+                times.sort((a, b) => {
+                    const timeA = new Date(`2000-01-01 ${a}`);
+                    const timeB = new Date(`2000-01-01 ${b}`);
+                    return timeA - timeB;
+                });
+
+                // Display the available times as buttons
+                times.forEach(time => {
+                    const timeButton = document.createElement('button');
+                    timeButton.textContent = time;
+                    timeButton.className = 'available-time-btn';
+                    timeButton.addEventListener('click', handleTimeButtonClick);
+                    availableTimesContainer.appendChild(timeButton);
+                });
+            }
+
+            function handleTimeButtonClick(event) {
+                // Implement what should happen when a time button is clicked
+                const selectedTime = event.target.textContent;
+                // You can add further actions or navigate to another page here
+            }
+        });
+
+	</script>
+
 </body>
 </html>
