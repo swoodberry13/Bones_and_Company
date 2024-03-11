@@ -3,25 +3,25 @@ https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 */
 
 p {
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
     font-weight: normal;
 	color: #0e3b43;
 }
 
 h1,h2,h3{
-	font-family: 'Lexend', Verdana, Arial, sans-serif;
+	font-family: 'Lexend', Tahoma, Arial, sans-serif;
 	font-weight: normal;
 	color: #0e3b43;
 }
 a{
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
 	font-weight: normal;
 }
 body{
 	background-color: #E1EFF6;
 	margin: 0;
 	overflow: auto;
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
 }
 
 
@@ -102,6 +102,7 @@ body{
 	padding:3px 6px;
 	color: #ffffff;
 	margin: 20px 6px;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 	 
 	text-align: center;
 
@@ -126,7 +127,7 @@ body{
 
 	background-color: #A5D7F9; 
 	text-decoration: none;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 
 	text-align: center;
 	font-size: 70%;
@@ -244,7 +245,7 @@ window smaller again, the dropdown should also not be visible */
 .footer_links li a{
 	text-decoration: none;
 	color:  #ffffff;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 }
 
 /*------HOVER EFFECTS------*/
