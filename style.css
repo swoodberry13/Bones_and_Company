@@ -71,7 +71,7 @@ body{
 	height: max-content;
 	background-color: #edae49;
 	border-bottom: .5px solid #ba8838;
-    padding: 10px;
+    padding: 6px;
 }
 
 /*----------------MENU CSS----------------*/
@@ -91,7 +91,7 @@ body{
     display: inline-flex;
     padding: 0;
     margin: 0;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 
@@ -145,8 +145,9 @@ body{
     
 }
 
-#menu .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{border-bottom-left-radius: 4px;}
+/*gives rounded edge to last child to make edge of menu look rounded */
+#menu .itemMenu:last-child{ 
+	a{border-bottom-left-radius: 3.5px;}
 }
 
 #menu {
@@ -158,8 +159,13 @@ body{
     flex-direction: column;
     position: absolute;
     right: 0;
-    top: 90px;
+    top: 82px;
     visibility: collapse;
+
+    /*border for vertical meny*/
+    border-left: .5px solid #BA8838;
+    border-bottom: .5px solid #BA8838;
+    border-bottom-left-radius: 4px;
 }
 
 /*-----WINDOW SIZE CSS-----*/
