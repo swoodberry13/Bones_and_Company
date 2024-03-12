@@ -99,8 +99,8 @@
 			flex-wrap: wrap;
 			list-style: none;
 			text-align: center;
-			margin: 0;  /* Add this line to remove margin */
-			padding: 0; /* Add this line to remove padding */
+			margin: 0;  /* to remove margin */
+			padding: 0; /* to remove padding */
 		}
 
 
@@ -164,10 +164,9 @@
 			margin-top: 4%;
 			padding-left: 5%;
 			padding-bottom: 5%;
-			/* padding-right: 0; */
 			border: 2px solid #244D54;
 			border-radius: 15px;
-			box-sizing: border-box; /* Ensure padding and border are included in the width */
+			box-sizing: border-box; /* ensures padding and border are included in the width */
 		}
 
         /* style for the available time buttons */
@@ -185,7 +184,7 @@
 			transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 			font-weight: 900;
 			font-size: 1rem;
-			width: 25%; /* Adjust the width as needed */
+			width: 25%;
 		}
 
 		.available-time-btn:hover {
@@ -201,20 +200,18 @@
 		}
 
         @media only screen and (max-width: 700px) {
-            /* Adjust the max-width value based on your design needs */
-
             .wrapper {
-                display: none; /* Show the wrapper when the screen size is decreased */
+                display: none; /* hide the big calendar when the screen size is decreased */
             }
 
             .small-calendar {
-                display: block; /* Hide the small-calendar when the screen size is decreased */
+                display: block; /* show the small calendar when the screen size is decreased */
             }
         }
 
 		.no-availability {
 			font-weight: bold;
-			color: #FF0000; /* Adjust the color as needed */
+			color: #FF0000;
 			margin-top: 10px;
 		}
 
@@ -223,109 +220,106 @@
 		}
 
 		.basic-info form {
-        width: 70%;
-        margin: auto;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
+			width: 70%;
+			margin: auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
 
-    .basic-info label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
+		.basic-info label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: bold;
+		}
 
-    .basic-info input,
-    .basic-info select,
-    .basic-info textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
+		.basic-info input,
+		.basic-info select,
+		.basic-info textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
 
-    .pet-icon {
-        font-size: 32px; /* Increased font size for larger icons */
-        margin-right: 15px; /* Increased margin for better spacing */
-        cursor: pointer;
-        transition: color 0.3s, border 0.3s; /* Added transition for color and border changes */
-    }
+		.pet-icon {
+			font-size: 32px; /* Increased font size for larger icons */
+			margin-right: 15px; /* Increased margin for better spacing */
+			cursor: pointer;
+			transition: color 0.3s, border 0.3s; /* Added transition for color and border changes */
+		}
 
-    .pet-icon:hover,
-    .pet-icon.selected {
-        color: #edae49;
-    }
+		.pet-icon:hover,
+		.pet-icon.selected {
+			color: #edae49;
+		}
 
-    .pet-icon.selected {
-        border: 2px solid #edae49; /* Added border for the selected icon */
-        border-radius: 5px; /* Added border-radius for a rounded border */
-    }
+		.pet-icon.selected {
+			border: 2px solid #edae49; /* border for the selected icon */
+			border-radius: 5px; 		/* border-radius for a rounded border */
+		}
 
-    .basic-info button {
-        background-color: #edae49;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+		.basic-info button {
+			background-color: #edae49;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
 
-    .basic-info button:hover {
-        background-color: #244D54;
-    }
+		.basic-info button:hover {
+			background-color: #244D54;
+		}
 
-    /* Add this style to center the form on the page */
-    .basic-info {
-		display: none;
-        justify-content: center;
-        align-items: center;
-        /* height: 100vh; */
-		width: 90%;
-		margin-top: 2%;
-		margin-bottom: 2%;
-    }
+		/* to center the form on the page */
+		.basic-info {
+			display: none;
+			justify-content: center;
+			align-items: center;
+			width: 90%;
+			margin-top: 2%;
+			margin-bottom: 2%;
+		}
 
-	h1, h2, h3 {
-		text-align: center;
-	}
+		h1, h2, h3 {
+			text-align: center;
+		}
 
-	.confirmation-button {
-		display: none;
-	}
+		.confirmation-button {
+			display: none;
+		}
     </style>
 </head>
 
 <body>
 
 	<script>
-		
-			function selectPetType(petType) {
-        // Remove the 'selected' class from all pet icons
-        const petIcons = document.querySelectorAll('.pet-icon');
-        petIcons.forEach(icon => {
-            icon.classList.remove('selected');
-        });
+		function selectPetType(petType) {
 
-        // Add the 'selected' class to the clicked pet icon
-        const clickedIcon = document.querySelector(`.pet-icon[data-pet="${petType}"]`);
-        clickedIcon.classList.add('selected');
+			// Remove the 'selected' class from all pet icons
+			const petIcons = document.querySelectorAll('.pet-icon');
+			petIcons.forEach(icon => {
+				icon.classList.remove('selected');
+			});
 
-        // Your existing code for handling pet selection goes here
-        console.log(`Selected pet type: ${petType}`);
-    }
+			// Add the 'selected' class to the clicked pet icon
+			const clickedIcon = document.querySelector(`.pet-icon[data-pet="${petType}"]`);
+			clickedIcon.classList.add('selected');
+
+			console.log(`Selected pet type: ${petType}`);
+		}
 	</script>
 	<!-- TODO: RE-ADD THE REMOVED CODE SPECIFIED BELOW -->
 	<!-- temporarily removed header and footer code for my own sanity's sake lol  -->
 	<div class="guide">
 		<h1 style="text-align: center; margin-top: 20px;">Choose a date, time, and provider</h1>
 	</div>
-	
 	
 	<div class="small-calendar">
 		<label for="dateSelector">Select a Date:</label>
@@ -432,66 +426,66 @@
 
 		// CALENDAR CODE
 		const daysTag = document.querySelector(".days"),
-currentDate = document.querySelector(".current-date"),
-prevNextIcon = document.querySelectorAll(".icons span");
+		currentDate = document.querySelector(".current-date"),
+		prevNextIcon = document.querySelectorAll(".icons span");
 
-// getting new date, current year and month
-let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
+		// getting new date, current year and month
+		let date = new Date(),
+		currYear = date.getFullYear(),
+		currMonth = date.getMonth();
 
-// storing full name of all months in array
-const months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+		// storing full name of all months in array
+		const months = ["January", "February", "March", "April", "May", "June", "July",
+					    "August", "September", "October", "November", "December"];
 
-const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
-    let liTag = "";
+		const renderCalendar = () => {
+			let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+			lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+			lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+			lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+			let liTag = "";
 
-    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-    }
+			for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+				liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+			}
 
-    for (let i = 1; i <= lastDateofMonth; i++) {
-        // Adding active class to li if the current day, month, and year match the current date
-        let isToday = "";
-        if (
-            i === new Date().getDate() &&
-            currMonth === new Date().getMonth() &&
-            currYear === new Date().getFullYear()
-        ) {
-            isToday = "active";
-        }
-        liTag += `<li class="${isToday}">${i}</li>`;
-    }
+			for (let i = 1; i <= lastDateofMonth; i++) {
+				// Adding active class to li if the current day, month, and year match the current date
+				let isToday = "";
+				if (
+					i === new Date().getDate() &&
+					currMonth === new Date().getMonth() &&
+					currYear === new Date().getFullYear()
+				) {
+					isToday = "active";
+				}
+				liTag += `<li class="${isToday}">${i}</li>`;
+			}
 
-    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
-        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
-    }
-    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-    daysTag.innerHTML = liTag;
-}
-renderCalendar();
+			for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+				liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+			}
+			currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+			daysTag.innerHTML = liTag;
+		}
+		renderCalendar();
 
-prevNextIcon.forEach(icon => { // getting prev and next icons
-    icon.addEventListener("click", () => { // adding click event on both icons
-        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+		prevNextIcon.forEach(icon => { // getting prev and next icons
+			icon.addEventListener("click", () => { // adding click event on both icons
+				// if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+				currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
-        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
-            // creating a new date of current year & month and pass it as date value
-            date = new Date(currYear, currMonth, new Date().getDate());
-            currYear = date.getFullYear(); // updating current year with new date year
-            currMonth = date.getMonth(); // updating current month with new date month
-        } else {
-            date = new Date(); // pass the current date as date value
-        }
-        renderCalendar(); // calling renderCalendar function
-    });
-});
+				if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+					// creating a new date of current year & month and pass it as date value
+					date = new Date(currYear, currMonth, new Date().getDate());
+					currYear = date.getFullYear(); // updating current year with new date year
+					currMonth = date.getMonth(); // updating current month with new date month
+				} else {
+					date = new Date(); // pass the current date as date value
+				}
+				renderCalendar(); // calling renderCalendar function
+			});
+		});
 		// CALENDAR CODE OVER
 
 
@@ -575,11 +569,7 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 			]
 		};
 
-
-	// OLD CODE
-
 		document.addEventListener('DOMContentLoaded', function () {
-
 
 			// add the doctors
 			const doctor_options = document.getElementById('doctorSelector');
@@ -818,90 +808,91 @@ dayElements.forEach(dayElement => {
         });
 
 
-	// form submission & confirmation details
-	// TODO: fix tmr
-    function handleFormSubmit() {
-        // Validate the form fields
-        const email = document.getElementById('email').value;
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const phoneNumber = document.getElementById('phoneNumber').value;
-        const petsName = document.getElementById('petsName').value;
-        const petType = document.querySelector('.pet-icon.selected').dataset.pet;
-        const reasonForVisit = document.getElementById('reasonForVisit').value;
+		// form submission & confirmation details
+		// TODO: fix tmr
+		function handleFormSubmit() {
 
-        if (!email || !firstName || !lastName || !phoneNumber || !petsName || !petType || !reasonForVisit) {
-            // Display an error message if any required field is empty
-            alert('Please fill out all required fields.');
-            return false;
-        }
+			// Validate the form fields
+			const email = document.getElementById('email').value;
+			const firstName = document.getElementById('firstName').value;
+			const lastName = document.getElementById('lastName').value;
+			const phoneNumber = document.getElementById('phoneNumber').value;
+			const petsName = document.getElementById('petsName').value;
+			const petType = document.querySelector('.pet-icon.selected').dataset.pet;
+			const reasonForVisit = document.getElementById('reasonForVisit').value;
 
-        // Hide the form container
-        document.querySelector('.basic-info').style.display = 'none';
+			if (!email || !firstName || !lastName || !phoneNumber || !petsName || !petType || !reasonForVisit) {
+				// Display an error message if any required field is empty
+				alert('Please fill out all required fields.');
+				return false;
+			}
 
-        // Show the confirmation container
-        const confirmationContainer = document.querySelector('.confirmation');
-        confirmationContainer.style.display = 'block';
+			// Hide the form container
+			document.querySelector('.basic-info').style.display = 'none';
 
-        // Create and append confirmation message
-        const confirmationMessage = document.createElement('div');
-        confirmationMessage.className = 'confirmation-message';
+			// Show the confirmation container
+			const confirmationContainer = document.querySelector('.confirmation');
+			confirmationContainer.style.display = 'block';
 
-        // Map icon
-        const mapIcon = createIcon('map');
-        confirmationMessage.appendChild(mapIcon);
+			// Create and append confirmation message
+			const confirmationMessage = document.createElement('div');
+			confirmationMessage.className = 'confirmation-message';
 
-        // Bones & Company
-        const bonesAndCompany = createConfirmationItem('Bones & Company', '320 Foley St, Somerville, MA');
-        confirmationMessage.appendChild(bonesAndCompany);
+			// Map icon
+			const mapIcon = createIcon('map');
+			confirmationMessage.appendChild(mapIcon);
 
-        // Calendar icon and Date/time
-        const calendarIcon = createIcon('calendar');
-        confirmationMessage.appendChild(calendarIcon);
-        const dateAndTime = createConfirmationItem('', customFormattedDate + ' at ' + selectedTime);
-        confirmationMessage.appendChild(dateAndTime);
+			// Bones & Company
+			const bonesAndCompany = createConfirmationItem('Bones & Company', '320 Foley St, Somerville, MA');
+			confirmationMessage.appendChild(bonesAndCompany);
 
-        // Paw icon and Pet's name
-        const pawIcon = createIcon('paw');
-        confirmationMessage.appendChild(pawIcon);
-        const petName = createConfirmationItem('Pet\'s Name', petsName);
-        confirmationMessage.appendChild(petName);
+			// Calendar icon and Date/time
+			const calendarIcon = createIcon('calendar');
+			confirmationMessage.appendChild(calendarIcon);
+			const dateAndTime = createConfirmationItem('', customFormattedDate + ' at ' + selectedTime);
+			confirmationMessage.appendChild(dateAndTime);
 
-        // Person icon and Customer details
-        const personIcon = createIcon('person');
-        confirmationMessage.appendChild(personIcon);
-        const customerDetails = createConfirmationItem('Customer Name', `${firstName} ${lastName}<br>${email}<br>${phoneNumber}`);
-        confirmationMessage.appendChild(customerDetails);
+			// Paw icon and Pet's name
+			const pawIcon = createIcon('paw');
+			confirmationMessage.appendChild(pawIcon);
+			const petName = createConfirmationItem('Pet\'s Name', petsName);
+			confirmationMessage.appendChild(petName);
 
-        confirmationContainer.appendChild(confirmationMessage);
+			// Person icon and Customer details
+			const personIcon = createIcon('person');
+			confirmationMessage.appendChild(personIcon);
+			const customerDetails = createConfirmationItem('Customer Name', `${firstName} ${lastName}<br>${email}<br>${phoneNumber}`);
+			confirmationMessage.appendChild(customerDetails);
 
-        // Create and append Confirm button
-        const confirmButtonContainer = document.createElement('div');
-        confirmButtonContainer.className = 'confirmation-button';
-        const confirmButton = document.createElement('button');
-        confirmButton.textContent = 'Confirm and Complete Booking';
-        confirmButton.addEventListener('click', handleConfirmationButtonClick);
-        confirmButtonContainer.appendChild(confirmButton);
-        confirmationContainer.appendChild(confirmButtonContainer);
+			confirmationContainer.appendChild(confirmationMessage);
 
-        return true; // Prevent form submission
-    }
+			// Create and append Confirm button
+			const confirmButtonContainer = document.createElement('div');
+			confirmButtonContainer.className = 'confirmation-button';
+			const confirmButton = document.createElement('button');
+			confirmButton.textContent = 'Confirm and Complete Booking';
+			confirmButton.addEventListener('click', handleConfirmationButtonClick);
+			confirmButtonContainer.appendChild(confirmButton);
+			confirmationContainer.appendChild(confirmButtonContainer);
 
-    // Helper function to create icons
-    function createIcon(iconType) {
-        const icon = document.createElement('div');
-        icon.className = 'confirmation-icon';
-        icon.textContent = iconType; // You can replace this with your actual icon element
-        return icon;
-    }
+			return true; // Prevent form submission
+		}
 
-    // Helper function to create confirmation message items
-    function createConfirmationItem(label, value) {
-        const item = document.createElement('div');
-        item.className = 'confirmation-item';
-        item.innerHTML = `<strong>${label}</strong><br>${value}`;
-        return item;
-    }
+		// Helper function to create icons
+		function createIcon(iconType) {
+			const icon = document.createElement('div');
+			icon.className = 'confirmation-icon';
+			icon.textContent = iconType; // can replace this with actual icon element
+			return icon;
+		}
+
+		// Helper function to create confirmation message items
+		function createConfirmationItem(label, value) {
+			const item = document.createElement('div');
+			item.className = 'confirmation-item';
+			item.innerHTML = `<strong>${label}</strong><br>${value}`;
+			return item;
+		}
 
 	</script>
 
