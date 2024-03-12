@@ -3,25 +3,25 @@ https://coolors.co/e1eff6-ffffff-a5d7f9-b1defc-0e3b43-124a54-edae49-ba8838
 */
 
 p {
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
     font-weight: normal;
 	color: #0e3b43;
 }
 
 h1,h2,h3{
-	font-family: 'Lexend', Verdana, Arial, sans-serif;
+	font-family: 'Lexend', Tahoma, Arial, sans-serif;
 	font-weight: normal;
 	color: #0e3b43;
 }
 a{
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
 	font-weight: normal;
 }
 body{
 	background-color: #E1EFF6;
 	margin: 0;
 	overflow: auto;
-    font-family: 'Inter', Verdana, Arial, sans-serif;
+    font-family: 'Inter', Tahoma, Arial, sans-serif;
 }
 
 
@@ -71,7 +71,7 @@ body{
 	height: max-content;
 	background-color: #edae49;
 	border-bottom: .5px solid #ba8838;
-    padding: 10px;
+    padding: 6px;
 }
 
 /*----------------MENU CSS----------------*/
@@ -91,7 +91,7 @@ body{
     display: inline-flex;
     padding: 0;
     margin: 0;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 
@@ -102,6 +102,7 @@ body{
 	padding:3px 6px;
 	color: #ffffff;
 	margin: 20px 6px;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 	 
 	text-align: center;
 
@@ -126,7 +127,7 @@ body{
 
 	background-color: #A5D7F9; 
 	text-decoration: none;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 
 	text-align: center;
 	font-size: 70%;
@@ -144,8 +145,9 @@ body{
     
 }
 
-#menu .itemMenu:last-child{ /*gives rounded edge to last child to make edge of menu look rounded */
-	a{border-bottom-left-radius: 4px;}
+/*gives rounded edge to last child to make edge of menu look rounded */
+#menu .itemMenu:last-child{ 
+	a{border-bottom-left-radius: 3.5px;}
 }
 
 #menu {
@@ -157,8 +159,13 @@ body{
     flex-direction: column;
     position: absolute;
     right: 0;
-    top: 90px;
+    top: 82px;
     visibility: collapse;
+
+    /*border for vertical meny*/
+    border-left: .5px solid #BA8838;
+    border-bottom: .5px solid #BA8838;
+    border-bottom-left-radius: 4px;
 }
 
 /*-----WINDOW SIZE CSS-----*/
@@ -244,7 +251,7 @@ window smaller again, the dropdown should also not be visible */
 .footer_links li a{
 	text-decoration: none;
 	color:  #ffffff;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Inter', Tahoma, Arial, sans-serif;
 }
 
 /*------HOVER EFFECTS------*/
@@ -289,6 +296,7 @@ window smaller again, the dropdown should also not be visible */
 	transition: all 0.3s ease;
 }
 .linkBlock:hover{
+	cursor: pointer;
 	background-color: #edae49;
 	border: 2px solid #BA8838
 }
@@ -332,7 +340,7 @@ window smaller again, the dropdown should also not be visible */
 		 h2,h1{
 		 	position: relative;
 		 	text-align: center;
-		 	color: #ffffff;
+		 	color: #0E3B43;
 		 	padding: 1.5vw;
 
 
@@ -344,26 +352,15 @@ window smaller again, the dropdown should also not be visible */
 		 	margin-right: .75vw;
 		 	margin-bottom: .5vw;
 
-		 	border-radius: 2vw;
-
 		 	position: relative;
-		 	background-color: #edae49;
+/*		 	background-color: #edae49;*/
 		 	max-width: max-content;
 		 	text-align: center;
 		 }
 }
 .title1{
 	text-align: center;
-	color: #ffffff;
-}
-.title1 span{ /* this is for the background of title1 */
-	margin-top: .5vw;
-	margin-left: .75vw;
-	margin-right: .75vw;
-	margin-bottom: .5vw;
-	background-color: #124A54;
-	padding:  1.5vw;
-	border-radius: 1vw;
+	color: #0E3B43;
 }
 
 .imgBlock{
