@@ -294,6 +294,47 @@
 		.confirmation-button {
 			display: none;
 		}
+
+		.confirmation {
+			display: none;
+			text-align: left;
+			margin-top: 20px;
+			width: 50%;
+		}
+
+		.confirmation-message {
+			background-color: #f8f8f8;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			margin: auto;
+			width: 100%;
+		}
+
+		.confirmation-item {
+			margin-bottom: 15px;
+		}
+
+		.confirmation-button {
+			display: none;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.confirmation-button button {
+			background-color: #edae49;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		.confirmation-button button:hover {
+			background-color: #244D54;
+		}
     </style>
 </head>
 
@@ -313,8 +354,13 @@
 			clickedIcon.classList.add('selected');
 
 			console.log(`Selected pet type: ${petType}`);
+
+
+			// Get the petTypeIcons container
+			const petTypeIconsContainer = document.getElementById('petTypeIcons');
 		}
 	</script>
+
 	<!-- TODO: RE-ADD THE REMOVED CODE SPECIFIED BELOW -->
 	<!-- temporarily removed header and footer code for my own sanity's sake lol  -->
 	<div class="guide">
@@ -360,7 +406,7 @@
 			</select>
         
 			<div class="availability">
-				<h2>Available Times:</h2>
+				<h2 style="text-align: left">Available Times:</h2>
             <div id="availableTimes" class="availableTimes"></div>
 			</div>
         </div>
@@ -369,7 +415,7 @@
     </div>
 	
 	<div class="basic-info">
-		<form id="bookingForm" onsubmit="return handleFormSubmit()">
+		<form id="bookingForm">
 			<label for="email">Email Address:</label>
 			<input type="email" id="email" name="email" required>
 
@@ -385,7 +431,7 @@
 			<label for="petsName">Pet's Name:</label>
 			<input type="text" id="petsName" name="petsName" required>
 
-			<label for="petType">Type of Animal:</label>
+			<label id="petType">Type of Animal:</label>
 			
 
 			<div id="petTypeIcons">
@@ -422,7 +468,17 @@
 
 		var selectedDate = "null";
 		var selectedDay = "null";
+
 		var customFormattedDate;
+		var email;
+		var firstName;
+		var lastName;
+		var phoneNumber;
+		var petsName;
+		var petType;
+		var reasonForVisit;
+		var selectedTime;
+
 
 		// CALENDAR CODE
 		const daysTag = document.querySelector(".days"),
@@ -434,7 +490,7 @@
 		currYear = date.getFullYear(),
 		currMonth = date.getMonth();
 
-		// storing full name of all months in array
+		// storing full name of months in array
 		const months = ["January", "February", "March", "April", "May", "June", "July",
 					    "August", "September", "October", "November", "December"];
 
@@ -487,7 +543,6 @@
 			});
 		});
 		// CALENDAR CODE OVER
-
 
 		// totally uncessary made up info of doctor times smh
 		const schedule = {
@@ -584,43 +639,41 @@
 				});
 			}
 
-// Add an event listener for the days in the new calendar
-const daysInNewCalendar = document.querySelectorAll('.calendar .days li');
-    daysInNewCalendar.forEach(day => {
-        day.addEventListener('click', handleDateClick);
-    });
+			// Add an event listener for the days in the new calendar
+			const daysInNewCalendar = document.querySelectorAll('.calendar .days li');
+				daysInNewCalendar.forEach(day => {
+					day.addEventListener('click', handleDateClick);
+				});
 
-    function handleDateClick(event) {
-		console.log("event");
-		console.log(event);
-        selectedDate = new Date(currYear, currMonth, parseInt(event.target.textContent));
-		console.log("selected date 2");
-		console.log(selectedDate);
-        const selectedDoctor = document.getElementById('doctorSelector').value;
+			function handleDateClick(event) {
+				console.log("event");
+				console.log(event);
+				selectedDate = new Date(currYear, currMonth, parseInt(event.target.textContent));
+				console.log("selected date 2");
+				console.log(selectedDate);
+				const selectedDoctor = document.getElementById('doctorSelector').value;
 
-        // Update available times when a date is clicked
-        const availableTimes = getAvailableTimes(selectedDate, selectedDoctor, true, false);
+				// Update available times when a date is clicked
+				const availableTimes = getAvailableTimes(selectedDate, selectedDoctor, true, false);
 
-        // Display the available times
-        displayAvailableTimes(availableTimes, selectedDoctor);
-    }
+				// Display the available times
+				displayAvailableTimes(availableTimes, selectedDoctor);
+			}
 
-// Get all the .days li elements
-const dayElements = document.querySelectorAll('.days li');
+			// Get all the .days li elements
+			const dayElements = document.querySelectorAll('.days li');
 
-// Add click event listener to each li element
-dayElements.forEach(dayElement => {
-    dayElement.addEventListener('click', () => {
-        // Remove 'active' class from all li elements
-        dayElements.forEach(element => element.classList.remove('active'));
+			// Add click event listener to each li element
+			dayElements.forEach(dayElement => {
+				dayElement.addEventListener('click', () => {
+					// Remove 'active' class from all li elements
+					dayElements.forEach(element => element.classList.remove('active'));
 
-        // Add 'active' class to the clicked li element
-        dayElement.classList.add('active');
-    });
-});
+					// Add 'active' class to the clicked li element
+					dayElement.classList.add('active');
+				});
+			});
 
-
-	// OLD CODE
             const dateSelector = document.getElementById('dateSelector');
             const doctorSelector = document.getElementById('doctorSelector');
             const availableTimesContainer = document.getElementById('availableTimes');
@@ -782,9 +835,8 @@ dayElements.forEach(dayElement => {
             }
 
             function handleTimeButtonClick(event) {
-                // Implement what should happen when a time button is clicked
-                const selectedTime = event.target.textContent;
-                // You can add further actions or navigate to another page here
+                // Implements what should happen when a time button is clicked
+                selectedTime = event.target.textContent;
 
 				// hide containers
 				document.querySelector('.booking-container').style.display = 'none';
@@ -799,7 +851,72 @@ dayElements.forEach(dayElement => {
 				document.querySelector('.basic-info').style.display = 'flex';
             }
 
+			// Add an event listener to the "Next" button
+			const nextButton = document.querySelector('#bookingForm button[type="submit"]');
+			nextButton.addEventListener('click', function (event) {
 
+				console.log("VALIDATION!!!");
+
+				// Validate the form fields
+				email = document.getElementById('email').value;
+				firstName = document.getElementById('firstName').value;
+				lastName = document.getElementById('lastName').value;
+				phoneNumber = document.getElementById('phoneNumber').value;
+				petsName = document.getElementById('petsName').value;
+				console.log("OG PET NAME");
+				console.log(petsName);
+				petType = document.querySelector('.pet-icon.selected').dataset.pet;
+				reasonForVisit = document.getElementById('reasonForVisit').options[document.getElementById('reasonForVisit').selectedIndex].text;
+
+				if (!email || !firstName || !lastName || !phoneNumber || !petsName || !petType || !reasonForVisit) {
+					// Display an error message if any required field is empty
+					alert('Please fill out all required fields.');
+					return;
+				}
+
+				event.preventDefault(); // Prevent the default form submission behavior
+
+				// Hide the form container
+				document.querySelector('.basic-info').style.display = 'none';
+
+				const guideText = document.querySelector('.guide');
+				guideText.innerHTML = `<h1>Please confirm <strong>${petsName}</strong>'s appointment details below</h1>`;
+				
+				const confirmationMessage = document.createElement('div');
+				confirmationMessage.className = 'confirmation-message';
+
+				document.querySelector('.confirmation-button').style.display = 'block';
+
+				// const mapIcon = createIcon('map');
+				// confirmationMessage.appendChild(mapIcon);
+
+				const bonesAndCompany = createConfirmationItem('Bones & Company', '320 Foley St, Somerville, MA');
+				confirmationMessage.appendChild(bonesAndCompany);
+
+				// const calendarIcon = createIcon('calendar');
+				// confirmationMessage.appendChild(calendarIcon);
+				const dateAndTime = createConfirmationItem(customFormattedDate + ' at ' + selectedTime,'');
+				confirmationMessage.appendChild(dateAndTime);
+
+				// const pawIcon = createIcon('paw');
+				// confirmationMessage.appendChild(pawIcon);
+				console.log("PET NAME");
+				console.log(petsName);
+				const petName = createConfirmationItem(petsName, reasonForVisit);
+				confirmationMessage.appendChild(petName);
+
+				// const personIcon = createIcon('person');
+				// confirmationMessage.appendChild(personIcon);
+				const customerDetails = createConfirmationItem(`${firstName} ${lastName}`, `${email}<br>${phoneNumber}`);
+				confirmationMessage.appendChild(customerDetails);
+
+				// Assuming 'confirmationContainer' is the container for confirmation messages
+				const confirmationContainer = document.querySelector('.confirmation');
+				confirmationContainer.innerHTML = ''; // Clear existing content
+				confirmationContainer.appendChild(confirmationMessage);
+
+				document.querySelector('.confirmation').style.display = 'block';
+			});
 
 			// Automatically display available times for today's date
 			selectedDate = new Date();
@@ -808,76 +925,7 @@ dayElements.forEach(dayElement => {
         });
 
 
-		// form submission & confirmation details
-		// TODO: fix tmr
-		function handleFormSubmit() {
-
-			// Validate the form fields
-			const email = document.getElementById('email').value;
-			const firstName = document.getElementById('firstName').value;
-			const lastName = document.getElementById('lastName').value;
-			const phoneNumber = document.getElementById('phoneNumber').value;
-			const petsName = document.getElementById('petsName').value;
-			const petType = document.querySelector('.pet-icon.selected').dataset.pet;
-			const reasonForVisit = document.getElementById('reasonForVisit').value;
-
-			if (!email || !firstName || !lastName || !phoneNumber || !petsName || !petType || !reasonForVisit) {
-				// Display an error message if any required field is empty
-				alert('Please fill out all required fields.');
-				return false;
-			}
-
-			// Hide the form container
-			document.querySelector('.basic-info').style.display = 'none';
-
-			// Show the confirmation container
-			const confirmationContainer = document.querySelector('.confirmation');
-			confirmationContainer.style.display = 'block';
-
-			// Create and append confirmation message
-			const confirmationMessage = document.createElement('div');
-			confirmationMessage.className = 'confirmation-message';
-
-			// Map icon
-			const mapIcon = createIcon('map');
-			confirmationMessage.appendChild(mapIcon);
-
-			// Bones & Company
-			const bonesAndCompany = createConfirmationItem('Bones & Company', '320 Foley St, Somerville, MA');
-			confirmationMessage.appendChild(bonesAndCompany);
-
-			// Calendar icon and Date/time
-			const calendarIcon = createIcon('calendar');
-			confirmationMessage.appendChild(calendarIcon);
-			const dateAndTime = createConfirmationItem('', customFormattedDate + ' at ' + selectedTime);
-			confirmationMessage.appendChild(dateAndTime);
-
-			// Paw icon and Pet's name
-			const pawIcon = createIcon('paw');
-			confirmationMessage.appendChild(pawIcon);
-			const petName = createConfirmationItem('Pet\'s Name', petsName);
-			confirmationMessage.appendChild(petName);
-
-			// Person icon and Customer details
-			const personIcon = createIcon('person');
-			confirmationMessage.appendChild(personIcon);
-			const customerDetails = createConfirmationItem('Customer Name', `${firstName} ${lastName}<br>${email}<br>${phoneNumber}`);
-			confirmationMessage.appendChild(customerDetails);
-
-			confirmationContainer.appendChild(confirmationMessage);
-
-			// Create and append Confirm button
-			const confirmButtonContainer = document.createElement('div');
-			confirmButtonContainer.className = 'confirmation-button';
-			const confirmButton = document.createElement('button');
-			confirmButton.textContent = 'Confirm and Complete Booking';
-			confirmButton.addEventListener('click', handleConfirmationButtonClick);
-			confirmButtonContainer.appendChild(confirmButton);
-			confirmationContainer.appendChild(confirmButtonContainer);
-
-			return true; // Prevent form submission
-		}
-
+		// TODO: remove, b/c not doing icons anymore
 		// Helper function to create icons
 		function createIcon(iconType) {
 			const icon = document.createElement('div');
@@ -892,6 +940,14 @@ dayElements.forEach(dayElement => {
 			item.className = 'confirmation-item';
 			item.innerHTML = `<strong>${label}</strong><br>${value}`;
 			return item;
+		}
+
+		function handleConfirmationButtonClick() {
+			const guideText = document.querySelector('.guide');
+				guideText.innerHTML = `<h1>Thank you for scheduling an appointment.<br>
+					We look forward to seeing you and ${petsName} soon.`;
+			
+			document.querySelector('.confirmation-button').style.display = 'none';
 		}
 
 	</script>
