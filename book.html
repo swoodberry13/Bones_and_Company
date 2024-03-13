@@ -199,7 +199,7 @@
 			flex: 1;
 		}
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 950px) {
             .wrapper {
                 display: none; /* hide the big calendar when the screen size is decreased */
             }
@@ -335,11 +335,52 @@
 		.confirmation-button button:hover {
 			background-color: #244D54;
 		}
+
     </style>
 </head>
 
 <body>
+	<div class= "header">
+		<div id="top_banner">
+			<script type="text/javascript">
+				function showMenu() {/*script for top navbar*/
+					var menu = document.getElementById('menu');
+                    if (menu.style.visibility == "visible") {menu.style.visibility = "collapse";}
+                    else {menu.style.visibility = "visible";}
+				}
+			</script>
 
+			<a href="home.html"><img id="logo" src="./images/logo_name_white.png"></a>
+
+            <div><!-- horizontal menu (for screens>900px) -->
+                <ul id="horizontal-menu">
+                	<li class="itemMenu"><a href="home.html">Home</a></li>
+                    <li class="itemMenu"><a href="book.html">Book</a></li>
+                    <li class="itemMenu"><a href="services.html">Services</a></li>
+                    <li class="itemMenu"><a href="resources.html">Resources</a></li>
+                    <li class="itemMenu"><a href="contact.html">Contact Us</a></li>
+                    <li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
+                    <li class="itemMenu"><a href="customers.html">Customers</a></li>
+                </ul>
+
+                <!-- hamburger icon -->
+                <img id="menuIMG" src="./images/menuIcon.png" onclick=showMenu()>
+                	
+            </div>
+		</div>
+
+        <!-- hamburger dropdown menu -->
+        <!-- vertical menu(for screens<900px)-->
+		<ul id="menu">
+			<li class="itemMenu"><a href="home.html">Home</a></li>
+			<li class="itemMenu"><a href="book.html">Book</a></li>
+			<li class="itemMenu"><a href="services.html">Services</a></li>
+			<li class="itemMenu"><a href="resources.html">Resources</a></li>
+			<li class="itemMenu"><a href="contact.html">Contact Us</a></li>
+			<li class="itemMenu"><a href="meetStaff.html">Meet our Staff</a></li>
+			<li class="itemMenu"><a href="customers.html">Customers</a></li>
+		</ul>
+	</div>
 	<script>
 		function selectPetType(petType) {
 
@@ -360,9 +401,6 @@
 			const petTypeIconsContainer = document.getElementById('petTypeIcons');
 		}
 	</script>
-
-	<!-- TODO: RE-ADD THE REMOVED CODE SPECIFIED BELOW -->
-	<!-- temporarily removed header and footer code for my own sanity's sake lol  -->
 	<div class="guide">
 		<h1 style="text-align: center; margin-top: 20px;">Choose a date, time, and provider</h1>
 	</div>
@@ -952,5 +990,15 @@
 
 	</script>
 
+	<div id="footer">
+		<div id="footer_print">
+			<img id="footer_dog" src="./images/footer_dog.png">
+			<ul class="footer_links">
+				<li><a class="my_footer_link"href="contact.html">Contact Us</a></li>
+				<li><a class="my_footer_link"href="resources.html">Resources</a></li>
+				<li><a class="my_footer_link"href="book.html">Booking</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
